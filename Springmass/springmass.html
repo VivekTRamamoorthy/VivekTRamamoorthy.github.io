@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF8">
+	<title>Spring mass</title>
+	<style type="text/css">
+		canvas {
+			border: 1px solid black;
+			height: 100% ;
+			width: 100% ;
+			background: rgba(0,0,0,0.1);
+		}
+		body {
+			margin: 1;
+		}
+	</style>
+</head>
+<body>
+
+
+	<canvas></canvas>
+
+	<script>
+		// This is a canvas tutorial
+
+		// ------ BASICS OF CANVAS
+		console.log('Pull the spring and release')
+		// get the canvas by using query selector
+		var canvas =document.querySelector('canvas');
+		// changing the width and height of the canvas window
+		canvas.width= window.innerWidth;
+		canvas.height = window.innerHeight;
+		// console.log(canvas)
+		// getting the context of the canvas
+		var c=canvas.getContext('2d');
+		// c is going to be used so very often.
+
+
+
+
+
+
+// GLOBAL VARIABLES
+var mouse = {
+	x: undefined,    y: undefined
+}
+var mousedrop = {
+	x: undefined,    y: undefined
+}
+var mouseclick = {
+	x: undefined,    y: undefined
+}
+
+
+// var x = 0;
+// var y = 0;
+var r = 0.05*innerWidth;
+// var dx = 0;
+// var dy = 0;
+var dt = 0.1;
+var meanposx = window.innerWidth/2; // mean position in x direction
+var	meanposy = window.innerHeight/2; // mean position in y direction
+var zeta = 0.0;
+var k = 1; 
+var m = 1;
+var omega_n=Math.sqrt(k/m);
+var springWidth=r*.5;
+var mouseInfluence = 1.75*r;
+// ADDING EVENT LISTENERS
+// This will get be fired each time an event occurs
+// An event may be a mouse 
+// whenever there is a mouse move, this function is called
+let drag = false; // on when mouse is kept pressed
+let drop = false; // fires when mouse released
+
+
+// MOUSE CLICK HOLD LISTENER
+document.addEventListener('mousedown', (e) => {drag = false; 
+	 // console.log(e)
+	 drag = true;
+	 mouseclick.x=e.x;
+	 mouseclick.y=e.y;
+	// console.log('mouseclicked')
+	if (drag==false){
+		drop=true; 
+	} else{
+		drop = false;
+	}
+});
+
+
+// MOUSE RELEASE LISTENER
+document.addEventListener('mouseup', (e) => {
+	// console.log(e);
+	drag=false;
+	mousedrop.x=e.x;
+	mousedrop.y=e.y;
+});
+
+// MOUSE POSITION LISTENER
+document.addEventListener('mousemove', (e) => {
+	mouse.x=e.x;
+	mouse.y=e.y;
+});
+
+
+
+
+// DEFINING THE SPRING MASS OBJECT
+function Mass(x,y,dy,m,k,zeta){
+	// this.xfrac=x/innerWidth;
+	// this.yfrac=y/innerHeight;
+    this.x=x; // mean position in x
+    this.y=y; // mean position in y
+    this.dy=dy; // velocity in y
+    this.m=m;
+    this.k=k;
+    this.zeta=zeta;
+    this.omega_n=Math.sqrt(this.k/this.m);
+    if (this.zeta<1){
+    	this.omega_d=this.omega_n*Math.sqrt(1-this.zeta**2);
+    	console.log('Underdamped system')
+    }
+    else if (this.zeta==1){
+    	this.omega_d=0;
+    	console.log('critically damped system')
+    }
+    else if(this.zeta>1){
+    	this.omega_d=this.omega_n*Math.sqrt(this.zeta**2-1)
+    }
+    this.t=0;
+    this.X0=this.y;
+    this.V0=this.dy;
+    // this.r=r; // radius of the circle
+    // create a method inside the object
+    // in this case an anonymous function without a name
+    this.draw = function(){
+		// Draw a spring
+		c.beginPath();
+		c.moveTo(this.x,meanposy+this.y+r/2);
+		for(var i=0;i<=100;i++){
+			c.lineTo(this.x+springWidth/2*Math.sin(i/100*10*Math.PI),meanposy+this.y+r/2+i/100*(meanposy-this.y-r/2));
+
+		}
+		c.strokeStyle = 'blue';
+		c.lineWidth = 8;
+		c.stroke();
+
+        // Fill a rectangle
+        c.fillStyle='rgba(255,50,50,0.8)' ;
+        c.fillRect(this.x-r/2,meanposy+this.y-r/2,r,r)
+
+
+        //  Write text M
+        c.font = r/2+ 'px Arial';
+        c.fillStyle='#000000' ;
+        c.textAlign='center';
+        c.fillText('M', this.x, meanposy+this.y+r/4);
+
+                //  Write text zeta
+        c.font = r/3+ 'px Arial';
+        c.fillStyle='#000000' ;
+        c.textAlign='center';
+        c.fillText("\u03B6 " +' = '+ this.zeta, this.x,r,r);
+
+    }
+    this.update = function(){
+    	if (drag && (Math.abs(this.x-mouse.x)<mouseInfluence || mouse.x> 0.9*innerWidth ||mouse.x<0.1*innerWidth)){
+    		// time marching method
+    		this.y=mouse.y-meanposy;
+
+    		// analytical method
+    		this.X0=this.y;
+    		this.V0=0;
+    		this.t=0;
+    	}else{
+    		// TIME MARCHING METHOD
+    	// // computing acceleration
+  		// this.ddy=-Math.sqrt(this.k/this.m)*this.y-2*zeta*omega_n*this.dy;
+  		// // computing velocity
+  		//   	this.dy=this.dy+this.ddy*dt;
+		// // Computing displacement
+		// this.y=this.y+this.dy*dt+this.ddy/2*dt**2;
+
+    	// ANALYTICAL METHOD
+    	this.t=this.t+dt;
+    	if (this.zeta<1){
+    		this.y=Math.exp(-this.zeta*this.omega_n*this.t)*(this.X0*Math.cos(this.omega_d*this.t)+(this.V0+this.zeta*this.omega_n*this.X0)/this.omega_d*Math.sin(this.omega_d*this.t));
+    }else if(this.zeta==1){
+    	this.y=Math.exp(-this.omega_n*this.t)*(this.X0+this.t*(this.V0+this.omega_n*this.X0));
+
+    }else if(this.zeta>1){
+    	// To prevent NaNs running only upto t=1000
+    	if (this.t<100 && Math.abs(this.y)>0.01 && this.omega_n*this.t<40){
+    	this.y=Math.exp(-this.zeta*this.omega_n*this.t)*(this.X0*Math.cosh(this.omega_d*this.t)+(this.V0+this.zeta*this.omega_n*this.X0)/this.omega_d*Math.sinh(this.omega_d*this.t));
+    	// console.log(this.y);
+    	//console.log(this.t+' '+ Math.abs(this.y))
+    }
+    }
+
+}
+this.draw();
+}
+
+}
+
+// Creating a new mass object
+// var ball = new Mass(8*r,-r,0,1,1,2);
+var ball1 = new Mass(0.2*innerWidth,-r,0,1,1,0);
+var ball2 = new Mass(0.3*innerWidth,-r,0,1,1,0.02);
+var ball3 = new Mass(0.4*innerWidth,-r,0,1,1,0.1);
+var ball4 = new Mass(0.5*innerWidth,-r,0,1,1,0.8);
+var ball5 = new Mass(0.6*innerWidth,-r,0,1,1,1);
+var ball6 = new Mass(0.7*innerWidth,-r,0,1,1,2);
+var ball7 = new Mass(0.8*innerWidth,-r,0,1,1,10);
+
+
+// Mass(x,y,dy,m,k,zeta)
+
+// Event listener for window resizing
+window.addEventListener('resize',
+	function(event){
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+        meanposx = window.innerWidth/2; // mean position in x direction
+		meanposy = window.innerHeight/2; // mean position in y direction
+		console.log('Window resized')
+		// ball.update();
+		ball1.update();
+		ball2.update();
+		ball3.update();
+		ball4.update();
+		ball5.update();
+		ball6.update();
+		ball7.update();
+
+
+
+
+	})
+
+
+
+// Actual animation
+function animate(){  
+
+	c.clearRect(0,0,window.innerWidth,window.innerHeight)
+		// ball.update();
+		ball1.update();
+		ball2.update();
+		ball3.update();
+		ball4.update();
+		ball5.update();
+		ball6.update();
+		ball7.update();
+
+
+	// Writing common text
+	        c.font = r/3+ 'px Arial';
+        c.fillStyle='#000000' ;
+        c.textAlign='center';
+        c.fillText("Spring mass systems with different damping ratios", innerWidth/2,r/2);
+	requestAnimationFrame(animate)
+	// console.log('Animating')
+}
+// calling the animation
+animate();
+
+</script>
+</body>
+</html>
+
+
+
+
+
