@@ -1,34 +1,72 @@
-<!-- TOP NAVIGATION -->
+<!-- TOP NAVIGATION --> 
 <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="topnav" id="myTopnav">
+	
 	<span class="pagetitle", style='float:left;'>Vivek T Ramamoorthy</span>
-		<a href="javascript:void(0);" class="icon" onclick="responsiveNavigation()">
-			<i class="fa fa-bars"></i>
-		</a>
-		<a href="contact.html">Contact</a>
-		<div class="dropdown" href="games.html">
-			<button class="dropbtn">Games
-				<i class="fa fa-caret-down"></i>
-			</button>
-			<div class="dropdown-content">
-				<a href="Ball_kicker_game/Kick_the_ball_game_v2.html">Kick the ball</a>
-				<a href="Springmass/springmass_v4_fullscreen.html">Damped masses</a>
-				<a href="#">Link 3</a>
-			</div>
+	
+	<a href="javascript:void(0);" class="icon" onclick="responsiveNavigation()">
+		<i class="fa fa-bars"></i>
+	</a>
+
+	<a id="contact" href="#contact"  onclick='contentUpdate("contact.html");'>Contact</a>
+	
+	<div class="dropdown" href="#games">
+		<button class="dropbtn" id="games"   onclick='contentUpdate("games.html");'>Games
+			<i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+			<a href="Ball_kicker_game/Kick_the_ball_game_v2.html">Kick the ball</a>
+			<a href="Springmass/springmass_v6.html">Damped masses</a>
+			<!-- <a href="#">Link 3</a> -->
 		</div>
-		<a href="teaching.html">Teaching</a>
-		<a href="profile.html">Profile</a>
-		<a href="index.html" class="active">Home</a>
 	</div>
+
+	<a id="teaching" href="#teaching"  onclick='contentUpdate("teaching.html");'>Teaching</a>
+
+	<a id="profile" href='#profile' onclick='contentUpdate("profile.html");'>Profile</a>
+
+	<a id="home" href='#' onclick='contentUpdate("home.html");'>Home</a>
+</div>
+
+
+
 <script>
-function responsiveNavigation() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
+	function responsiveNavigation() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
 </script>
-<!-- HEADER END -->
+
+
+
+<script>
+
+	function contentUpdate(pageName){
+		console.log('updating page :',pageName);
+		$('#content').load(pageName);
+
+		}
+
+
+
+</script>
+
+
+
+<script type="text/javascript">
+	var $navs = $('.nav');
+	$navs.find('a').click(function() {
+		console.log('click detected. Changing highlight');
+		$navs.removeClass('active');
+		$(this).parent().addClass('active');
+	}); 
+</script>
+
+
+
+<!-- HEADER END

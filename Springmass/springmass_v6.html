@@ -11,7 +11,7 @@
 			border: 2px solid black;
 			height: 90% ;
 			width: 100% ;
-			/*background: rgba(255,255,255,0.1);*/
+			background: rgba(255,255,255,0.1);
 		}
 		body {
 			margin: 20;
@@ -117,13 +117,14 @@ input:checked + .slider:before {
 	</script>
 	<div id='mybox'>
 	<div id='controlpanel'>
-		<center style="font-size:20px">
-			RUN  <label class="switch" >
+		<center style = ''>
+			<span style="font-size:34px; padding: 25">RUN</span>
+			<label class="switch" >
 				<input type="checkbox" checked>
 				<span class="slider round" onclick='runToggle()'></span>
 			</label>
-
-			MUSIC <label class="switch" >
+			<span style="font-size:34px; padding: 25">MUSIC</span> 
+			<label class="switch">
 				<input type="checkbox" >
 				<span class="slider round" onclick='soundToggle()'></span>
 			</label>
