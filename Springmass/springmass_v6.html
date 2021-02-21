@@ -175,7 +175,7 @@ input:checked + .slider:before {
 		}
 	}
 	// EVENT LISTENER to detect if the fullscreen has changed
-	document.addEventListener('fullscreenchange',()=>{console.log('fullscreen changed')})
+	// document.addEventListener('fullscreenchange',()=>{console.log('fullscreen changed')})
 	// FULL SCREEN ON DOUBLE CLICK SCRIPT ENDS 
 	</script>
 
@@ -462,6 +462,26 @@ window.addEventListener('resize',
         meanposx = canvas.width/2; // mean position in x direction
 		meanposy = canvas.height/2; // mean position in y direction
 		console.log('Window resized')
+		// ball.update();
+		ball1.update();
+		ball2.update();
+		ball3.update();
+		ball4.update();
+		ball5.update();
+		ball6.update();
+		ball7.update();
+
+
+
+
+	})
+// Event listener for fullscreen change resizing
+	document.addEventListener('fullscreenchange',function(event){
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight*.9;
+        meanposx = canvas.width/2; // mean position in x direction
+		meanposy = canvas.height/2; // mean position in y direction
+		console.log('Full screen changed')
 		// ball.update();
 		ball1.update();
 		ball2.update();
