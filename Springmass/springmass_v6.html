@@ -11,10 +11,14 @@
 			border: 2px solid black;
 			height: 90% ;
 			width: 100% ;
-			background: rgba(255,255,255,0.1);
+			background: #fff;
+		}
+		html{
+			background-color:#fff;
 		}
 		body {
 			margin: 20;
+			background: #fff;
 		}
 /* The switch - the box around the slider */
 .switch {
@@ -56,6 +60,17 @@
   transition: .4s;
 }
 
+.buttontext{
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
 input:checked + .slider {
   background-color: #2196F3;
 }
@@ -78,6 +93,24 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+
+.btn {
+  border: none;
+  background-color: white;
+  padding: 0px 10px 0px 50px;
+  font-size: 30px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* On mouse-over */
+.btn:hover {background-color: #;}
+
+.default {color: black;}
+.fullscreen {color: black; border: 1px solid; background: #ccc;  padding: 0px 50px 0px 50px;border-radius: 5px}
+
+
 	</style>
 </head>
 
@@ -88,6 +121,7 @@ input:checked + .slider:before {
 		var stop=false;
 		var sounds=false;
 		var firstmouseaction = false;
+		var fullscreentoggle=false;
 		var count=0;
 		function soundToggle(){
 			firstmouseaction = true;
@@ -115,18 +149,57 @@ input:checked + .slider:before {
 
 		}
 	</script>
-	<div id='mybox'>
+
+	<!-- FULL SCREEN ON DOUBLECLICK SCRIPT -->
+	<script type="text/javascript">
+	// checks if the window is already in fullscreen 
+	function getFullscreenElement(){ // returns true if in fullscreen
+		return document.fullscreenElement 
+		|| document.msFullscreenElement 
+		|| document.webkitFullscreenElement 
+		|| document.mozFullscreenElement;
+	}
+
+	// DOUBLE CLICK TO GO TO FULLSCREEN
+	document.addEventListener('dblclick',()=> {toggleFullscreen()})
+	// TOGGLE FUNCTION between fullscreen and exit fullscreen
+	function toggleFullscreen(){
+		firstmouseaction = true;
+		if (getFullscreenElement()){// if it is in full screen 
+			document.exitFullscreen(); // Exits fullscreen
+			fullscreentoggle = false;
+		}else {
+				// ACTUAL COMMAND to go to full screen
+			document.getElementById('mybox').requestFullscreen().catch(console.log);
+			fullscreentoggle = true;
+		}
+	}
+	// EVENT LISTENER to detect if the fullscreen has changed
+	document.addEventListener('fullscreenchange',()=>{console.log('fullscreen changed')})
+	// FULL SCREEN ON DOUBLE CLICK SCRIPT ENDS 
+	</script>
+
+
+
+	<div id='mybox' style="background-color: white">
 	<div id='controlpanel'>
-		<center style = ''>
-			<span style="font-size:34px; padding: 25">RUN</span>
+		<center style="font-size: 34px; padding-left: 50px; align-items: center;">
+			<button class="btn default">Run</button>
 			<label class="switch" >
 				<input type="checkbox" checked>
 				<span class="slider round" onclick='runToggle()'></span>
 			</label>
-			<span style="font-size:34px; padding: 25">MUSIC</span> 
+			<button class="btn default">Sounds</button>
 			<label class="switch">
 				<input type="checkbox" >
 				<span class="slider round" onclick='soundToggle()'></span>
+			</label>
+
+			<!-- <button id='fBtn' class="btn fullscreen" onclick="toggleFullscreen();">Fullscreen</button> -->
+			<button class="btn default">Fullscreen</button>
+			<label class="switch">
+				<input type="checkbox" >
+				<span class="slider round" onclick='toggleFullscreen()'></span>
 			</label>
 		</center>
 	</div>
@@ -134,31 +207,7 @@ input:checked + .slider:before {
 	</div>
 
 
-	<!-- FULL SCREEN ON DOUBLECLICK SCRIPT -->
-	<script type="text/javascript">
-	// checks if the window is already in fullscreen 
-	// function getFullscreenElement(){ // returns true if in fullscreen
-	// 	return document.fullscreenElement 
-	// 	|| document.msFullscreenElement 
-	// 	|| document.webkitFullscreenElement 
-	// 	|| document.mozFullscreenElement;
-	// }
 
-	// DOUBLE CLICK TO GO TO FULLSCREEN
-	document.addEventListener('dblclick',()=> {toggleFullscreen()})
-	// TOGGLE FUNCTION between fullscreen and exit fullscreen
-	function toggleFullscreen(){
-	// 	if (getFullscreenElement()){// if it is in full screen 
-	// 		//document.exitFullscreen(); // Exits fullscreen
-	// 	}else {
-				// ACTUAL COMMAND to go to full screen
-			document.getElementById('mybox').requestFullscreen().catch(console.log);
-	// 	}
-	}
-	// EVENT LISTENER to detect if the fullscreen has changed
-	document.addEventListener('fullscreenchange',()=>{console.log('fullscreen changed')})
-	// FULL SCREEN ON DOUBLE CLICK SCRIPT ENDS 
-	</script>
 
 	
 	<!-- <div> 
