@@ -1,9 +1,20 @@
 <!-- TOP NAVIGATION --> 
 <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<script>
+
+	function contentUpdate(pageName){
+		console.log('updating page :',pageName);
+		$('#content').load(pageName);
+		}
+		console.log('Content should be updated')
+
+</script>
+
 <div class="topnav" id="myTopnav">
 	
-	<span class="pagetitle", style='float:left;' href="index.html">Vivek T Ramamoorthy</span>
+	<a class="pagetitle", style='float:left; font-size: 20px' href="#">Vivek T Ramamoorthy</a>
 	
 	<a href="javascript:void(0);" class="icon" onclick="responsiveNavigation()">
 		<i class="fa fa-bars"></i>
@@ -28,9 +39,6 @@
 
 	<a id="home" href='#' onclick='contentUpdate("home.html");'>Home</a>
 </div>
-
-
-
 <script>
 	function responsiveNavigation() {
 		var x = document.getElementById("myTopnav");
@@ -41,23 +49,6 @@
 		}
 	}
 </script>
-
-
-
-<script>
-
-	function contentUpdate(pageName){
-		console.log('updating page :',pageName);
-		$('#content').load(pageName);
-
-		}
-
-
-
-</script>
-
-
-
 <script type="text/javascript">
 	var $navs = $('.nav');
 	$navs.find('a').click(function() {
@@ -66,7 +57,4 @@
 		$(this).parent().addClass('active');
 	}); 
 </script>
-
-
-
 <!-- HEADER END
