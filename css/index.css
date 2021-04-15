@@ -12,6 +12,7 @@ body{
   padding:20% 0 20% 0;
   margin-top: 60px; /* Add a top margin to avoid content overlay */
   font-size: 25px;
+  text-align: justify;
 }
 
 #content h1 {
@@ -27,6 +28,11 @@ body{
   text-align: left;
     font-size: 32px;
   /*background-color: #ddd;*/
+  color: rgb(182, 49, 49);
+  border: 2px solid  rgb(182, 49, 49);
+  padding: 10px;
+  border-radius: 10px;
+  
 }
 
 #content h3 {
@@ -61,3 +67,14 @@ body{
 }
 
 
+.quote {
+  background-color: yellow;
+  border: 2px solid green; 
+  height: 300 px ; 
+  padding: 30px; 
+  color: green; 
+  border-radius: 100px;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}

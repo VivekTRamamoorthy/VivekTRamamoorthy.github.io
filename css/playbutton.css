@@ -1,6 +1,7 @@
 .playbutton {
     height: 100px;
     width: 100px;
+    margin: auto;
     /* padding: 25px 25px; */
     font-size: 24px;
     text-align: center;
@@ -27,21 +28,23 @@
       color:white;
   }
 
+  /* PREVIEW BUTTON */
 
   .previewbutton {
-    height: 100px;
+    height: 50px;
     /* width: 100px; */
-    padding: 15px 25px;
+    padding: 15px;
     font-size: 24px;
     text-align: center;
     cursor: pointer;
     outline: none;
     color: #fff;
     background-color: #e3f164;
-    border: none;
-    border-radius: 50px;
+    border:  1px black;
+    border-radius: 15px;
     box-shadow: 0 9px #999;
     text-decoration: none;
+    margin: auto;
   }
   
   .previewbutton:hover {background-color: #f0ec1a}
