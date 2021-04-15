@@ -1,4 +1,8 @@
 
+  <!-- Mathjax \( \) for inline \[ \] for separate-->
+  <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script> -->
+
 <!-- ACTUAL PAGE -->
 <!-- <a id='games' data-hs-anchor="true"></a> -->
 <a id='ball_kicker_section' data-hs-anchor="true"></a>
@@ -10,7 +14,7 @@ Here are some examples of simple games in Javascript.
 Well, technically they are not games, but you could still play with them. :-)
 
 <br>
-I thank Luc Jaouen for inspiring me to make these. I recommend checking out Luc's collections at <a href="apmr.matelys.com">apmr.matelys.com</a>.
+I thank Luc Jaouen for inspiring me to make these. Check out Luc's collections at <a href="apmr.matelys.com">apmr.matelys.com</a>.
 
 
 </center>
@@ -85,7 +89,8 @@ This is an illustration of free vibration of damped systems. A variety of system
 <h3>Theory: What is damping ratio?</h3>
 
 For every spring mass system with a mass m and stiffness k, there exists a critical value of damping given by 
-[[ c_c=2*sqrt(mk)]].
+$ c_c=2 \sqrt{mk} $
+.
  Damping ratio is the ratio of the actual damping factor c to the critical damping factor.
 
 <br>
@@ -127,6 +132,9 @@ For every spring mass system with a mass m and stiffness k, there exists a criti
 <br>
 <br>
 
+<script>
+  MathJax.typeset();
+</script>
 <!-- <script>
 
 	function contentUpdate(pageName){
