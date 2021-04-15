@@ -1,5 +1,7 @@
 
 <!-- ACTUAL PAGE -->
+<!-- <a id='games' data-hs-anchor="true"></a> -->
+<a id='ball_kicker_section' data-hs-anchor="true"></a>
 
 <h1>Games</h1>
 <center>
@@ -15,6 +17,8 @@ I thank Luc Jaouen for inspiring me to make these. I recommend checking out Luc
 
 <br><br><br>
 
+<!-- KICK THE BALL -->
+
 <h2>KICK THE BALL</h2>
 <h3>Instructions:</h3>
 <p>Move the mouse near the ball to kick it.</p>
@@ -22,11 +26,44 @@ I thank Luc Jaouen for inspiring me to make these. I recommend checking out Luc
 <br>
 <br>
 
+<script>
+    var ballKickerPreviewToggle;
+  function ballKickerPreview(){
+    console.log('updating preview')
+    if(ballKickerPreviewToggle==undefined || ballKickerPreviewToggle==0){
+      document.getElementById('ballkickerpreview').innerHTML="<iframe src='Ball_kicker_game/Kick_the_ball_game_v2.html' height='400' width='600' title='Iframe Example'></iframe>";
+   ballKickerPreviewToggle=1;
+    }else{
+      document.getElementById('ballkickerpreview').innerHTML="";
+      ballKickerPreviewToggle=0;
+    }
+  }  
+  </script>
+
 <center>
-<button class="playbutton" href="Ball_kicker_game/Kick_the_ball_game_v2.html" target="_blank">PLAY</button>
+  <button class="previewbutton" onclick=ballKickerPreview();>
+    <a>PREVIEW</a>
+  </button> 
+    <!-- <span style="display:block; width: 20px;"></span> -->
+  <button class="playbutton" >
+    <a style="color:white; text-decoration: none;" href="Ball_kicker_game/Kick_the_ball_game_v2.html" target="_blank">PLAY</a>
+  </button>
+  <br>
+  <br>
+  <div  id="ballkickerpreview" style='align-self: center;'></div>
 </center>
 
+
+
+
+<a id='damped_masses_section' data-hs-anchor="true"></a>
+
+
 <br><br> <br>
+
+
+<!-- DAMPED MASSES -->
+
 
 <h2>DAMPED MASSES </h2>
 <h3>Instructions:</h3>
@@ -45,11 +82,6 @@ This is an illustration of free vibration of damped systems. A variety of system
 <p>P.S. The undamped system should never stop (unless you make it to). </p>
 
 
-
-
-
-
-
 <h3>Theory: What is damping ratio?</h3>
 
 For every spring mass system with a mass m and stiffness k, there exists a critical value of damping given by 
@@ -58,7 +90,50 @@ For every spring mass system with a mass m and stiffness k, there exists a criti
 
 <br>
 <br>
+
+<script>
+  var springMassPreviewToggle;
+  function springMassPreview(){
+    console.log('updating preview')
+    if(springMassPreviewToggle==undefined || springMassPreviewToggle==0){
+    document.getElementById("springmasspreview").innerHTML="<iframe src='Springmass/springmass_preview.html' height='400' width='600' ></iframe>";
+    springMassPreviewToggle=1;
+    }else{
+      document.getElementById("springmasspreview").innerHTML="";
+      springMassPreviewToggle=0;
+    }
+  }  
+  </script>
+
 <center>
-  <button class="playbutton" href="Springmass/Springmass_v7.html" target="_blank">PLAY</button>
+  <!-- <a class="playbutton" href="Springmass/Springmass_v7.html" target="_blank">PLAY</a>
+  <a class="playbutton" >PLAY</a> -->
+  <button class="previewbutton" onclick=springMassPreview();>
+    <a>PREVIEW</a>
+  </button>  
+  <button class="playbutton" >
+    <a style="color:white; text-decoration: none;" href="Springmass/Springmass_v7.html" target="_blank">PLAY</a>
+  </button>
+
+<br>
+<br>
+
+<div id="springmasspreview" ></div>
 </center>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- <script>
+
+	function contentUpdate(pageName){
+		console.log('updating page :',pageName);
+		$('#content').load(pageName);
+		}
+		console.log('Content should be updated')
+
+</script> -->
 

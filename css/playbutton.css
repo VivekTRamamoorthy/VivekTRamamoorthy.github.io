@@ -1,20 +1,58 @@
 .playbutton {
+    height: 100px;
+    width: 100px;
+    /* padding: 25px 25px; */
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #cf5555;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 9px #999;
+    text-decoration: none;
+  }
+  
+  .playbutton:hover {background-color: #ce1616}
+  
+  .playbutton:active {
+    background-color: #eb0f0f;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  .playbutton a{
+      text-decoration: none;
+      color:white;
+  }
+
+
+  .previewbutton {
+    height: 100px;
+    /* width: 100px; */
     padding: 15px 25px;
     font-size: 24px;
     text-align: center;
     cursor: pointer;
     outline: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: #e3f164;
     border: none;
-    border-radius: 15px;
+    border-radius: 50px;
     box-shadow: 0 9px #999;
+    text-decoration: none;
   }
   
-  .playbutton:hover {background-color: #3e8e41}
+  .previewbutton:hover {background-color: #f0ec1a}
   
-  .playbutton:active {
-    background-color: #3e8e41;
+  .previewbutton:active {
+    background-color: #0febc6;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+  }
+
+  .previewbutton a{
+      text-decoration: none;
+      color:black;
   }

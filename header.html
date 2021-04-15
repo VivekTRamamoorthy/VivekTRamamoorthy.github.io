@@ -16,12 +16,11 @@
 
 	<a id="contact" href="#contact"  onclick='contentUpdate("contact.html");'>Contact</a>
 	
-	<div class="dropdown" href="#games">
-		<button class="dropbtn" id="games"   onclick='contentUpdate("games.html");'>Games
-		</button>
-		<div class="dropdown-content">
-			<a href="Ball_kicker_game/Kick_the_ball_game_v2.html" target="_blank">Kick the ball</a>
-			<a href="Springmass/springmass_v6.html" target="_blank">Damped masses</a>
+	<div class="dropdown" href="#games" >
+		<button class="dropbtn" id="games"   onclick='contentUpdate("games.html");'>Games</button>
+		<div class="dropdown-content" onclick='contentUpdate("games.html");'>
+			<a href="#ball_kicker_section">Kick the ball</a>
+			<a href="#damped_masses_section">Damped masses</a>
 			<!-- <a href="#">Link 3</a> -->
 		</div>
 	</div>
@@ -30,8 +29,7 @@
 
 	<!-- <a id="profile" href='#profile' onclick='contentUpdate("profile.html");'>Profile</a> -->
 	<div class="dropdown" href="#profile">
-		<button class="dropbtn" id="profile"   onclick='contentUpdate("profile.html");'>Profile
-		</button>
+		<button class="dropbtn" id="profile"   onclick='contentUpdate("profile.html");'>Profile</button>
 		<div class="dropdown-content" onclick='contentUpdate("profile.html");'>
 			<a href="#work">Work</a>
 			<a href="#education">Education</a>
@@ -46,6 +44,7 @@
 	<a id="home" href='#' onclick='contentUpdate("home.html");'>Home</a>
 </div>
 
+<!-- This doesnt seem to work -->
 <script type="text/javascript">
 	var $navs = $('.nav');
 	$navs.find('a').click(function() {
