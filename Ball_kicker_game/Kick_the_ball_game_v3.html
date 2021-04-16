@@ -19,6 +19,9 @@
   
     // DOUBLE CLICK TO GO TO FULLSCREEN
     // document.addEventListener('dblclick',()=> {toggleFullscreen()})
+    // PREVENT DOUBLE CLICK FROM DOING DEFAULT
+    document.addEventListener('dblclick',(e) => {
+	e.preventDefault();})
     // TOGGLE FUNCTION between fullscreen and exit fullscreen
     function toggleFullscreen(){
     //  if (getFullscreenElement()){// if it is in full screen 
