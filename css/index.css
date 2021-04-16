@@ -11,7 +11,7 @@ body{
 #content{
   padding:20% 0 20% 0;
   margin-top: 60px; /* Add a top margin to avoid content overlay */
-  font-size: 25px;
+  font-size: 20px;
   text-align: justify;
 }
 
@@ -26,7 +26,7 @@ body{
 
 #content h2 {
   text-align: left;
-    font-size: 32px;
+    font-size: 25px;
   /*background-color: #ddd;*/
   color: rgb(182, 49, 49);
   border: 2px solid  rgb(182, 49, 49);
@@ -39,12 +39,12 @@ body{
   text-align: left;
   /*background-color: #eee;*/
   color: green;
-  font-size: 28px;
+  font-size: 22px;
 }
 
 #content p {
   text-align: left;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 
@@ -77,4 +77,20 @@ body{
   text-align: center;
   margin: auto;
   width: 50%;
+}
+
+.logo {
+  width: 100%;
+  display:block;
+}
+.logo img{
+  height: 10%; 
+  width: 10%;
+}
+
+.logo p{
+  width:80%; 
+  padding-right: 5%;  
+  vertical-align: center; 
+  float: left;
 }
