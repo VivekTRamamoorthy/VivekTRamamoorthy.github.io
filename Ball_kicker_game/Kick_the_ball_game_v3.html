@@ -18,7 +18,7 @@
     }
   
     // DOUBLE CLICK TO GO TO FULLSCREEN
-    document.addEventListener('dblclick',()=> {toggleFullscreen()})
+    // document.addEventListener('dblclick',()=> {toggleFullscreen()})
     // TOGGLE FUNCTION between fullscreen and exit fullscreen
     function toggleFullscreen(){
     //  if (getFullscreenElement()){// if it is in full screen 
@@ -75,12 +75,32 @@
           mouse.y=event.y;
       }); // and the mouse position is stored in mouse.x & mouse.y
   // If the window is resized, the canvas is resized.
-  canvas.addEventListener('touchmove', (e) => {
+  window.addEventListener('touchmove', (e) => {
 	e.preventDefault();
 	mouse.x=e.touches[0].clientX;
 	mouse.y=e.touches[0].clientY;
 		//alert('Touch end, x value'+e.x)
 	});
+  window.addEventListener('touchstart', (e) => {
+	e.preventDefault();
+	mouse.x=e.touches[0].clientX;
+	mouse.y=e.touches[0].clientY;
+		//alert('Touch end, x value'+e.x)
+	});
+  window.addEventListener('touchend', (e) => {
+	e.preventDefault();
+	mouse.x=e.touches[0].clientX;
+	mouse.y=e.touches[0].clientY;
+		//alert('Touch end, x value'+e.x)
+	});
+  window.addEventListener('touch', (e) => {
+	e.preventDefault();
+	mouse.x=e.touches[0].clientX;
+	mouse.y=e.touches[0].clientY;
+		//alert('Touch end, x value'+e.x)
+	});
+
+
   window.addEventListener('resize',
     function(event){
       canvas.width = window.innerWidth-15;
