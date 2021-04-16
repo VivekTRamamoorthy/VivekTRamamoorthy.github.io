@@ -21,7 +21,7 @@ body a:hover{
   padding:20% 0 20% 0;
   margin-top: 60px; /* Add a top margin to avoid content overlay */
   font-size: 20px;
-  text-align: justify;
+  text-align: left;
 }
 
 #content h1 {
