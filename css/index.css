@@ -7,6 +7,15 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   /*background-color: lightblue;*/
 }
+body a{
+  color: dodgerblue;
+}
+
+body a:hover{
+  color: dodgerblue;
+  background-color: yellow;
+  border: 2px solid black;
+}
 
 #content{
   padding:20% 0 20% 0;
