@@ -9,15 +9,13 @@
   border-radius: 50%;
 
   /* display: block; */
-  /* border: 2px solid black;  */
-  /* background-color: gray; */
 }
 
 
-
-
 .fa:hover {
-    opacity: 0.7;
+  opacity: 0.7;
+  border: none;
+  /* background-color: inherit; */
 }
 
 .fa-others{
@@ -26,6 +24,15 @@
   padding: 0px;
   width: 80px; /* fontsize+ width*/
 
+  background-color: none;
+  border:none;
+}
+
+.fa-others:hover{
+  opacity: 0.7;
+  background-color: white;
+  border: 0px;
+  
 }
 
 .fa-facebook {
@@ -33,7 +40,17 @@
   color: white;
 }
 
+.fa-facebook:hover {
+  background: #3B5998;
+  color: white;
+}
+
 .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-twitter:hover {
   background: #55ACEE;
   color: white;
 }
@@ -44,6 +61,11 @@
 }
 
 .fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-linkedin:hover {
   background: #007bb5;
   color: white;
 }
