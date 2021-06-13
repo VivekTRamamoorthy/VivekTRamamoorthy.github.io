@@ -1,6 +1,8 @@
 # mysite
-Hi. This is my portfolio page. 
+Hi. 
 
 Visit the page at [VivekTRamamoorthy.github.io](https://VivekTRamamoorthy.github.io)
+
+:-)
 
 Vivek
