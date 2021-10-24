@@ -1,78 +1,28 @@
 <!-- TOP NAVIGATION --> 
 
 <script>
-
 	function contentUpdate(pageName){
-
-
-
-		console.log('updating page :',pageName);
 		$('#content').load(pageName);
-		console.log('Content should be updated');
-		// 
-
-		}
-
-
-
+	}
 </script>
 
+
+
+<!-- TOP NAVIGATION MENU  -->
 <div class="topnav" id="myTopnav">
+
+
+
+	<!-- PAGE TITLE  -->
+	<a class="pagetitle", style='background-color: gray; ' href="#" onclick='contentUpdate("profile.html");'>Vivek T Ramamoorthy</a>
 	
-	<a class="pagetitle", style='float:left; font-size: 20px' href="#" onclick='contentUpdate("profile.html");'>Vivek T Ramamoorthy</a>
 
-	<a id="contact" href="#"  onclick='contentUpdate("contact.html");'>Contact</a>
-	
-	<div class="dropdown" href="#games" >
-		<button class="dropbtn" id="games"   onclick='contentUpdate("games.html");'>Games</button>
-		<div class="dropdown-content" onclick='contentUpdate("games.html");'>
-			<a href="#ball_kicker_section">Kick the ball</a>
-			<a href="#damped_masses_section">Damped masses</a>
-			<!-- <a href="#">Link 3</a> -->
-		</div>
-	</div>
+	<!-- HOME -->
+	<a id="home" href='#' onclick='contentUpdate("home.html");'>Home</a>
 
-	<!-- <a id="teaching" href="#teaching"  onclick='contentUpdate("teaching.html");'>Teaching</a> -->
-	<div class="dropdown" href="#teaching">
-		<button class="dropbtn" id="teaching"   onclick='contentUpdate("teaching.html");'>Teaching</button>
-		<div class="dropdown-content" onclick='contentUpdate("teaching.html");'>
-			<a href="#fascinating_concepts_section">Fascinating concepts</a>
-			<a href="#courses_section">Courses</a>
-			<a href="#webprojects">Web projects</a>
 
-			<!-- <a href="#">Link 3</a> -->
-		</div>
-	</div>
-	<!-- MEGA MENU -->
-	<!-- <div class="dropdown megadropdown" href="#teaching">
-	<button class="dropbtn megadropbtn">Teaching new 
-		
-	  </button>
-	  <div class="megadropdown-content">
-		<div class="header">
-		  <h2>Teaching</h2>
-		</div>   
-		<div class="row">
-		  <div class="column">
-			<h3>Explainers</h3>
-			<a href="#" onclick='contentUpdate("CMAES.html");'>CMAES optimiser</a>
-			<a href="#">Basic math</a>
-		  </div>
-		  <div class="column">
-			<h3>Courses </h3>
-			<a href="#">Optimisation</a>
-			<a href="#"> Vibration and acoustics </a> 
-			
-		</div>
-		<div class="column">
-			<h3>Others</h3>
-			<a href="#">Fascinating concepts</a>
-			<a href="#">Miscellaneous</a>
-			<a href="#">Link 3</a>
-		  </div>
-		</div>
-	  </div>
-	</div> -->
+
+	<!-- PROFILE -->
 	<!-- <a id="profile" href='#profile' onclick='contentUpdate("profile.html");'>Profile</a> -->
 	<div class="dropdown" href="#profile">
 		<button class="dropbtn" id="profile"   onclick='contentUpdate("profile.html");'>Profile</button>
@@ -82,23 +32,65 @@
 			<a href="#researchinterests">Research Interests</a>
 			<a href="#projects">Projects</a>
 			<a href="#publications">Publications</a>
-
+			
 			<!-- <a href="#">Link 3</a> -->
 		</div>
 	</div>
 
-	<a id="home" href='#' onclick='contentUpdate("home.html");'>Home</a>
+
+
+	<!-- GAMES  -->
+	<div class="dropdown" href="#games" >
+		<button class="dropbtn" id="games"   onclick='contentUpdate("games.html");'>Games</button>
+		<div class="dropdown-content" onclick='contentUpdate("games.html");'>
+			<a href="#ball_kicker_section">Kick the ball</a>
+			<a href="#damped_masses_section">Damped masses</a>
+			<!-- <a href="#">Link 3</a> -->
+		</div>
+	</div>
+	
+
+	<!-- WEB PROJECTS  -->
+	<div class="dropdown" href="#webprojects">
+		<button class="dropbtn" id="webprojects"   onclick='contentUpdate("webprojects.html");'>Web projects</button>
+		<div class="dropdown-content" onclick='contentUpdate("webprojects.html");'>
+			<a target="_blank" href="https://VivekTRamamoorthy.github.io/TopOptWeb"> Topology optimisation in web platform</a>
+			<a target="_blank" href="https://VivekTRamamoorthy.github.io/GeneticAlgorithmTutorial"> Genetic algorithm tutorial</a>
+			<a target="_blank" href="https://VivekTRamamoorthy.github.io/Nurse-scheduler"> Nurse scheduling tool</a>
+			<a target="_blank" href="https://VivekTRamamoorthy.github.io/MatlabJS"> MATLAB library for Javascript</a>
+			<!-- <a href="#webprojects">Web projects</a> -->
+			<!-- <a href="#">Link 3</a> -->
+		</div>
+	</div>
+
+
+	
+	<!-- TEACHING  -->
+	<!-- <a id="teaching" href="#teaching"  onclick='contentUpdate("teaching.html");'>Teaching</a> -->
+	<div class="dropdown" href="#teaching">
+		<button class="dropbtn" id="teaching"   onclick='contentUpdate("teaching.html");'>Teaching</button>
+		<div class="dropdown-content" onclick='contentUpdate("teaching.html");'>
+			<a onclick='contentUpdate("teaching.html");' href="#fascinating_concepts_section">Fascinating concepts</a>
+			<a href="#courses_section">Courses</a>
+			<!-- <a href="#webprojects">Web projects</a> -->
+			
+			<!-- <a href="#">Link 3</a> -->
+		</div>
+	</div>
+	
+
+	
+	
+	
+	<!-- CONTACT -->
+	<a id="contact" href="#"  onclick='contentUpdate("contact.html");'>Contact</a>
+
+
+
+
 </div>
 
-<!-- This doesnt seem to work -->
-<script type="text/javascript">
-	var $navs = $('.nav');
-	$navs.find('a').click(function() {
-		console.log('click detected. Changing highlight');
-		$navs.removeClass('active');
-		$(this).parent().addClass('active');
-	}); 
-</script>
+
 
 
 
