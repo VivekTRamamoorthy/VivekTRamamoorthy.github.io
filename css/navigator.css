@@ -1,15 +1,9 @@
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: rgba(0,0,0,0.6);
-  width: 100%;
-  position: fixed;
-  top:0;
-  box-shadow: 5px -1px 12px -5px grey;
-}
-.topnavFixed {
-  width: 100%;
-  position: fixed;
-  transition: 0.3s ease-in-out;
+  /* overflow:hidden; */
+  /* float:left; */
+
 }
 
 
@@ -19,23 +13,43 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  text-align:center;
+  font-family:inherit;
   background-color: none;
   display: block;
   /* font-weight: bold; */
+  font-size: large;
+  width:auto;
+  margin:0;
+  /* float:left; */
   
 }
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: large;
+  border: none;
+  outline: none;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+  overflow:hidden;
+  }
+/* The dropdown container */
+.dropdown {
+  /* background-color: #333; */
+  font-size: x-large;
+}
+
+
 
 /* Change the color of links on hover */
 .topnav a:hover {
   border:none;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #4CAF50;
-  color: white;
-}
 
 /* COMMON FLOAT */
 .dropdown, .topnav a{
@@ -58,23 +72,7 @@
   color:white;
 } */
 
-/* The dropdown container */
-.dropdown {
-    /* background-color: #333; */
-    font-size: large;
-}
 
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: large;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-}
 
 /* Add a red background color to navbar links on hover */
 .topnav a:hover, .dropdown:hover .dropbtn {
@@ -115,7 +113,10 @@
   display: block;
 }
 
-
+/* Hide the hamburger icon that should open and close the topnav on small screens */
+.topnav a.icon {
+  display: none;
+}
 
 /* TABLET */
 @media screen and (max-width: 992px) {
@@ -130,11 +131,14 @@
 /* MOBILE */
 @media screen and (max-width: 600px) {
   .topnav a {
-    font-size: medium;
+    font-size: large;
     margin:0%;
     padding-left: 5px;
     padding-right:5px;
   }
 
 }
+
+
+
 

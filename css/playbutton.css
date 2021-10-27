@@ -1,12 +1,11 @@
 .playbutton {
-    height: 100px;
-    width: 100px;
-    margin: auto;
-    /* padding: 25px 25px; */
-    font-size: 24px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
+  height: 50px;
+  /* width: 100px; */
+  padding: 15px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
     color: #fff;
     background-color: #cf5555;
     border: none;

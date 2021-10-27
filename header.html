@@ -4,6 +4,11 @@
 	function contentUpdate(pageName){
 		$('#content').load(pageName);
 	}
+	var goTo=function(page,location){
+				contentUpdate(page);
+				elem=document.getElementById(location);
+				elem.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
+			}
 </script>
 
 
@@ -40,6 +45,19 @@
 
 
 	
+	<!-- TEACHING  -->
+	<!-- <a id="teaching" href="#teaching"  onclick='contentUpdate("teaching.html");'>Teaching</a> -->
+	<div class="dropdown" href="#teaching">
+		<button class="dropbtn" id="teaching"   onclick='contentUpdate("teaching.html");'>Teaching</button>
+		<div class="dropdown-content" onclick='contentUpdate("teaching.html");'>
+			<a onclick='contentUpdate("teaching.html");' href="#fascinating_concepts_section">Fascinating concepts</a>
+			<a href="#courses_section">Courses</a>
+			<!-- <a href="#webprojects">Web projects</a> -->
+			
+			<!-- <a href="#">Link 3</a> -->
+		</div>
+	</div>
+	
 	
 	<!-- WEB PROJECTS  -->
 	<div class="dropdown" href="#webprojects">
@@ -55,19 +73,6 @@
 	</div>
 	
 	
-	
-	<!-- TEACHING  -->
-	<!-- <a id="teaching" href="#teaching"  onclick='contentUpdate("teaching.html");'>Teaching</a> -->
-	<div class="dropdown" href="#teaching">
-		<button class="dropbtn" id="teaching"   onclick='contentUpdate("teaching.html");'>Teaching</button>
-		<div class="dropdown-content" onclick='contentUpdate("teaching.html");'>
-			<a onclick='contentUpdate("teaching.html");' href="#fascinating_concepts_section">Fascinating concepts</a>
-			<a href="#courses_section">Courses</a>
-			<!-- <a href="#webprojects">Web projects</a> -->
-			
-			<!-- <a href="#">Link 3</a> -->
-		</div>
-	</div>
 	
 	
 	<!-- GAMES  -->
@@ -89,6 +94,7 @@
 </center>
 
 </div>
+
 
 
 

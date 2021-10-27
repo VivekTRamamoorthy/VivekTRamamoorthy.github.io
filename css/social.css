@@ -1,3 +1,5 @@
+
+
 .fa {
   padding: 20px;
   font-size: 40px;
@@ -5,7 +7,7 @@
   height: 40 px;
   text-align: center;
   text-decoration: none;
-  margin: 5px;
+  margin: 10px;
   border-radius: 50%;
 
   /* display: block; */
@@ -23,7 +25,7 @@
   font-size: 40px;
   padding: 0px;
   width: 80px; /* fontsize+ width*/
-
+  margin-top:25px;
   background-color: none;
   border:none;
 }
@@ -38,16 +40,20 @@
 .fa-facebook {
   background: #3B5998;
   color: white;
+  /* margin-bottom: 25px; */
 }
 
 .fa-facebook:hover {
   background: #3B5998;
   color: white;
+  
 }
 
 .fa-twitter {
   background: #55ACEE;
   color: white;
+  margin-bottom: 25px;
+
 }
 
 .fa-twitter:hover {
@@ -58,11 +64,15 @@
 .fa-google {
   background: #dd4b39;
   color: white;
+  margin-bottom: 25px;
+
 }
 
 .fa-linkedin {
   background: #007bb5;
   color: white;
+  margin-bottom: 25px;
+
 }
 
 .fa-linkedin:hover {
