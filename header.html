@@ -1,26 +1,8 @@
-<!-- TOP NAVIGATION --> 
-
-<script>
-	function contentUpdate(pageName){
-		$('#content').load(pageName);
-	}
-	var goTo=function(page,location){
-				contentUpdate(page);
-				elem=document.getElementById(location);
-				elem.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
-			}
-</script>
-
-
-
 <!-- TOP NAVIGATION MENU  -->
 <div class="topnav" id="myTopnav">
 
 <center>
 
-	<!-- PAGE TITLE  -->
-	<!-- <a class="pagetitle", style='background-color: gray; ' href="#" onclick='contentUpdate("profile.html");'>Vivek T Ramamoorthy</a> -->
-	
 
 	<!-- HOME -->
 	<a id="home" href='#' onclick='contentUpdate("home.html");'>Home</a>
