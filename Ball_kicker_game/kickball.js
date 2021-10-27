@@ -33,7 +33,7 @@ var dy=0;
 
 
 // ADDING EVENT LISTENERS
-// This will get be fired each time an event occurs
+// This will be fired each time an event occurs
 // An event may be a mouse 
 // whenever there is a mouse move, this function is called
 window.addEventListener('mousemove',

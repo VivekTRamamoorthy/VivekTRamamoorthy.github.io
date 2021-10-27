@@ -1,10 +1,17 @@
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: rgba(0,0,0,0.6);
   width: 100%;
   position: fixed;
   top:0;
+  box-shadow: 5px -1px 12px -5px grey;
 }
+.topnavFixed {
+  width: 100%;
+  position: fixed;
+  transition: 0.3s ease-in-out;
+}
+
 
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -13,8 +20,10 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  background-color: #333;
+  background-color: none;
   display: block;
+  /* font-weight: bold; */
+  
 }
 
 /* Change the color of links on hover */
@@ -51,13 +60,13 @@
 
 /* The dropdown container */
 .dropdown {
-    background-color: #333;
-    font-size: 17px;
+    /* background-color: #333; */
+    font-size: large;
 }
 
 /* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 17px;
+  font-size: large;
   border: none;
   outline: none;
   color: white;
@@ -97,7 +106,8 @@
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: gray;
+  color:#eee;
 }
 
 /* Show the dropdown menu on hover */
@@ -110,14 +120,21 @@
 /* TABLET */
 @media screen and (max-width: 992px) {
   .topnav a {
-    font-size: 17px;
+    font-size: large;
+       margin:0%;
+    padding-left: 5px;
+    padding-right:5px;
   }
 }
 
 /* MOBILE */
 @media screen and (max-width: 600px) {
   .topnav a {
-    font-size: 17px;
+    font-size: medium;
+    margin:0%;
+    padding-left: 5px;
+    padding-right:5px;
   }
+
 }
 

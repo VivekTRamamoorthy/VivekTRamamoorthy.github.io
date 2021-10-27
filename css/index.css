@@ -3,8 +3,8 @@
 body{
   margin: 0%;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: whitesmoke;
-  font-size:20px;
+  background-image:linear-gradient(to right,cyan,blue) ;
+  font-size:medium;
 }
 body a{
   color: dodgerblue;
@@ -22,9 +22,9 @@ body a:hover{
 
 #content {
   margin: 0% 12% 0% 12%;
-  padding: 10% 8% 20% 8%;
+  padding: 1% 8% 20% 8%;
   margin-top: 60px; /* Add a top margin to avoid content overlay */
-  font-size: 20px;
+  font-size: medium;
   text-align: left;
 }
 
@@ -33,18 +33,18 @@ body a:hover{
   /*margin-top: 0px;*/
   /*background-color: #ccc;*/
   color: Dodgerblue;
-  font-size: 40px;
+  font-size: xx-large;
   font-weight: bold;
 }
 
 #content h2 {
   text-align: left;
-    font-size: 25px;
+    font-size: x-large;
   /*background-color: #ddd;*/
   color: rgb(182, 49, 49);
-  border: 2px solid  rgb(182, 49, 49);
-  padding: 10px;
-  border-radius: 10px;
+  /* border: 2px solid  rgb(182, 49, 49); */
+  /* padding: 10px; */
+  /* border-radius: 10px; */
   
 }
 
@@ -52,12 +52,12 @@ body a:hover{
   text-align: left;
   /*background-color: #eee;*/
   color: green;
-  font-size: 22px;
+  font-size: large;
 }
 
 #content p {
   text-align: left;
-  font-size: 20px;
+  font-size: medium;
 }
 
 
@@ -65,12 +65,11 @@ body a:hover{
 
 
 .quote {
-  background-color: yellow;
+  background-color: whitesmoke;
   border: 2px solid green; 
   height: 300 px ; 
   padding: 30px; 
   color: green; 
-  border-radius: 100px;
   text-align: center;
   margin: auto;
   width: 50%;
@@ -90,6 +89,18 @@ body a:hover{
   padding-right: 5%;  
   vertical-align: center; 
   float: left;
+}
+
+.footer{
+  /* position: fixed; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: whitesmoke;
+  text-align: center;
+  padding:30px;
+
 }
 
 #content{
