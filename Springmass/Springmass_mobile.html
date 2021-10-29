@@ -127,20 +127,20 @@ var firstmouseaction = false;
 // This will get be fired each time an event occurs
 // An event may be a mouse 
 // whenever there is a mouse move, this function is called
-let drag = false; // on when mouse is kept pressed
+let dragToggle = false; // on when mouse is kept pressed
 let drop = false; // fires when mouse released
 
 
 // MOUSE CLICK HOLD LISTENER
-canvas.addEventListener('mousedown', (e) => {drag = false; 
-	drag = true;
+canvas.addEventListener('mousedown', (e) => {dragToggle = false; 
+	dragToggle = true;
 	mouseclick.x=e.x;
 	mouseclick.y=e.y;
 
 });
 canvas.addEventListener('touchstart', (e) => {
 	e.preventDefault();
-	drag = true;
+	dragToggle = true;
 	mouseclick.x=e.touches[0].clientX;
 	mouseclick.y=e.touches[0].clientY;
 });
@@ -148,7 +148,7 @@ canvas.addEventListener('touchstart', (e) => {
 
 // MOUSE RELEASE LISTENER
 canvas.addEventListener('mouseup', (e) => {
-	drag=false;
+	dragToggle=false;
 	mousedrop.x=e.x;
 	mousedrop.y=e.y;
 });
@@ -159,12 +159,12 @@ canvas.addEventListener('touchend', (e) => {
 	// mousedrop.y=e.touches[0].clientY;
 	mousedrop.x=mouse.x;
 	mousedrop.y=mouse.y;
-	// if (drag==false){
+	// if (dragToggle==false){
 	// 	drop=true; 
 	// } else{
 	// 	drop = false;
 	// }
-	drag=false;
+	dragToggle=false;
 });
 
 // MOUSE POSITION LISTENER
@@ -252,7 +252,7 @@ function Mass(x,y,dy,m,k,zeta){
 
             }
             this.update = function(){
-            	if (drag && (Math.abs(this.x-mouse.x)<mouseInfluence || mouse.x> 0.9*canvas.width ||mouse.x<0.1*canvas.width)){
+            	if (dragToggle && (Math.abs(this.x-mouse.x)<mouseInfluence || mouse.x> 0.9*canvas.width ||mouse.x<0.1*canvas.width)){
     				// time marching method
     				this.y=mouse.y-meanposy;
 

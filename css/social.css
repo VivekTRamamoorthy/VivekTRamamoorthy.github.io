@@ -1,4 +1,12 @@
 
+.social{
+/* display: flex; */
+align-items: center;
+flex-wrap: wrap;
+justify-content: center;
+text-align: center;
+}
+
 
 .fa {
   padding: 20px;
@@ -165,3 +173,6 @@
   background: #ff6600;
   color: white;
 }
+
+
+

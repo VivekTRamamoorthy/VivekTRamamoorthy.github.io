@@ -93,15 +93,15 @@
   
   
   .topnav a {
-    font-size: large;
+    font-size: medium;
     margin:0%;
-    padding-left: 5px;
-    padding-right:5px;
+    padding: 3px 3px;
+    
   }
   
-  
-  
-  
+  .dropdown.dropbtn {
+   font-size: medium;
+  }
   
 }
 
