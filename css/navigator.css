@@ -3,46 +3,31 @@
   background-color: rgba(0,0,0,0.6);
   /* overflow:hidden; */
   /* float:left; */
-
+  text-align: center;
+  
 }
 
 
 /* Style the links inside the navigation bar */
-.topnav a {
+.topnav a, .dropdown.dropbtn {
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 15px 15px;
   text-decoration: none;
-  text-align:center;
-  font-family:inherit;
-  background-color: none;
-  display: block;
-  /* font-weight: bold; */
   font-size: large;
-  width:auto;
   margin:0;
-  /* float:left; */
   
 }
 
 /* Dropdown button */
-.dropdown .dropbtn {
-  font-size: large;
+.dropdown.dropbtn {
   border: none;
   outline: none;
-  color: #f2f2f2;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
+  background-color: inherit; 
+  /* Otherwise buttons have white background */
   margin: 0; /* Important for vertical align on mobile phones */
   overflow:hidden;
-  }
-/* The dropdown container */
-.dropdown {
-  /* background-color: #333; */
-  font-size: x-large;
 }
-
 
 
 /* Change the color of links on hover */
@@ -55,24 +40,6 @@
 .dropdown, .topnav a{
   display: inline-block;
 }
-
-
-/* .pagetitle {
-  float: left;
-  font-size: 17px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.pagetitle:hover {
-  background-color: red;
-  border: none;
-  color:white;
-} */
-
-
 
 /* Add a red background color to navbar links on hover */
 .topnav a:hover, .dropdown:hover .dropbtn {
@@ -118,25 +85,24 @@
   display: none;
 }
 
-/* TABLET */
-@media screen and (max-width: 992px) {
-  .topnav a {
-    font-size: large;
-       margin:0%;
-    padding-left: 5px;
-    padding-right:5px;
-  }
-}
+
 
 /* MOBILE */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+  
+  
+  
   .topnav a {
     font-size: large;
     margin:0%;
     padding-left: 5px;
     padding-right:5px;
   }
-
+  
+  
+  
+  
+  
 }
 
 

@@ -1,36 +1,49 @@
 
 
 body{
-  margin: 0%;
-  font-family: Arial, Helvetica, sans-serif;
-  background-image:linear-gradient(45deg,blue,cyan,yellow,magenta,red) ;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-size:medium;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-image:linear-gradient(45deg,black,cyan,red) ;
 }
-body a{
+a{
   color: dodgerblue;
 
 }
-p{
-  font-size:medium;
-}
 
-body a:hover{
-  color: dodgerblue;
+a:hover{
   background-color: rgba(255,255,0,0.6);
 }
 
 #content {
-  margin: 0% 12% 0% 12%;
-  padding: 1% 8% 20% 8%;
-  margin-top: 40px; /* Add a top margin to avoid content overlay */
-  font-size: medium;
+  margin:8%;
+  padding: 4%;
   text-align: left;
-  background-color: whitesmoke;
+  background-image: linear-gradient(to right,whitesmoke,lightyellow);
   min-height:100%;
+}
+
+.biobox {
+  display:block; 
+  /* place-items: center; */
+  width:100%;
+  padding:none; margin:none;
+  overflow:auto;
+}
+
+.shortbio {
+  padding:4%; 
+  text-align: left;
+  float:left;
+  width:60%;
+}
+
+.dp{
+  width:30%;
+  height:30%;
+  float:left;
+  overflow:auto;
+  /* position: relative;
+top:50%; */
 }
 
 
@@ -59,12 +72,10 @@ p {
   font-size: medium;
 }
 
-
 li{
   padding-left: 30px;
   margin-bottom:5px;
 }
-
 
 .quote {
   background-color: whitesmoke;
@@ -110,3 +121,36 @@ li{
  color:white;
 }
 
+
+/* MOBILE FRIENDLY */
+
+@media screen and (max-width: 600px) {
+  body{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,Arial, Helvetica, sans-serif;
+
+  }
+  #content {
+    margin: 2%;
+
+  }
+  .biobox {
+    display:grid; 
+    place-items: center;
+  }
+
+  .shortbio{
+    text-align: center;
+    display:block;
+    width:90%;
+  }
+  
+  .dp{
+    width:50%;
+    height:100%;
+    display:block;
+    overflow:visible;
+  }
+
+
+
+}

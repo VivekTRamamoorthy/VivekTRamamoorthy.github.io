@@ -1,18 +1,18 @@
 <!-- TOP NAVIGATION MENU  -->
 <div class="topnav" id="myTopnav">
 
-<center>
 
 
 	<!-- HOME -->
-	<a id="home" href='#' onclick='contentUpdate("home.html");'>Home</a>
+	<a class="dropbtn" id="home" href='#' onclick='contentUpdate("home.html");'>Home</a>
 
 
 
 	<!-- PROFILE -->
 	<!-- <a id="profile" href='#profile' onclick='contentUpdate("profile.html");'>Profile</a> -->
 	<div class="dropdown" href="#profile">
-		<button class="dropbtn" id="profile"   onclick='contentUpdate("profile.html");'>Profile</button>
+		<!-- <button class="dropbtn" id="profile"   onclick='contentUpdate("profile.html");'>Profile</button> -->
+		<a class="dropbtn" id="profile" href='#' onclick='contentUpdate("profile.html");'>Profile</a>
 		<div class="dropdown-content" onclick='contentUpdate("profile.html");'>
 			<a href="#work">Work</a>
 			<a href="#education">Education</a>
@@ -30,7 +30,7 @@
 	<!-- TEACHING  -->
 	<!-- <a id="teaching" href="#teaching"  onclick='contentUpdate("teaching.html");'>Teaching</a> -->
 	<div class="dropdown" href="#teaching">
-		<button class="dropbtn" id="teaching"   onclick='contentUpdate("teaching.html");'>Teaching</button>
+		<a class="dropbtn" id="teaching" href='#' onclick='contentUpdate("teaching.html");'>Teaching</a>
 		<div class="dropdown-content" onclick='contentUpdate("teaching.html");'>
 			<a onclick='contentUpdate("teaching.html");' href="#fascinating_concepts_section">Fascinating concepts</a>
 			<a href="#courses_section">Courses</a>
@@ -43,7 +43,7 @@
 	
 	<!-- WEB PROJECTS  -->
 	<div class="dropdown" href="#webprojects">
-		<button class="dropbtn" id="webprojects"   onclick='contentUpdate("webprojects.html");'>Web projects</button>
+		<a class="dropbtn" id="webprojects" href='#' onclick='contentUpdate("webprojects.html");'>Web projects</a>
 		<div class="dropdown-content" onclick='contentUpdate("webprojects.html");'>
 			<a target="_blank" href="https://VivekTRamamoorthy.github.io/TopOptWeb"> Topology optimisation in web platform</a>
 			<a target="_blank" href="https://VivekTRamamoorthy.github.io/GeneticAlgorithmTutorial"> Genetic algorithm tutorial</a>
@@ -59,7 +59,7 @@
 	
 	<!-- GAMES  -->
 	<div class="dropdown" href="#games" >
-		<button class="dropbtn" id="games"   onclick='contentUpdate("games.html");'>Games</button>
+		<a class="dropbtn" id="games" href='#' onclick='contentUpdate("games.html");'>Games</a>
 		<div class="dropdown-content" onclick='contentUpdate("games.html");'>
 			<a href="Ball_kicker_game/Kick_the_ball_game_v2.html" target="_blank">Kick the ball</a>
 			<a href="Springmass/springmass_v7.html" target="_blank">Damped masses</a>
@@ -73,7 +73,6 @@
 	<a id="contact" href="#"  onclick='contentUpdate("contact.html");'>Contact</a>
 
 
-</center>
 
 </div>
 
