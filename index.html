@@ -43,9 +43,11 @@
   </script>
   
   <!-- LOAD HEADER AND FOOTER using jQuery -->
-  <script>  $(function(){ $("#header").load("header.html"); });  </script>
-  <script>  $(function(){ $("#content").load("home.html"); });  </script>
-  <script>  $(function(){ $("#footer").load("footer.html"); });  </script>
+  <script>  
+    $(function(){ $("#header").load("header.html"); });  
+    // $(function(){ $("#content").load("home.html"); });  
+    $(function(){ $("#footer").load("footer.html"); });  
+  </script>
   
   
   <script> 
@@ -61,11 +63,156 @@
   
   
   <!-- HEADER SECTION -->
-  <div id="header"></div>
+  <div id="header">
+    <!-- TOP NAVIGATION MENU  -->
+    <div class="topnav" id="myTopnav">
+      
+      
+      
+      <!-- HOME -->
+      <a class="dropbtn" id="home" href='#' onclick='contentUpdate("home.html");'>Home</a>
+      
+      
+      
+      <!-- PROFILE -->
+      <!-- <a id="profile" href='#profile' onclick='contentUpdate("profile.html");'>Profile</a> -->
+      <div class="dropdown" href="#profile">
+        <!-- <button class="dropbtn" id="profile"   onclick='contentUpdate("profile.html");'>Profile</button> -->
+        <a class="dropbtn" id="profile" href='#' onclick='contentUpdate("profile.html");'>Profile</a>
+        <div class="dropdown-content" onclick='contentUpdate("profile.html");'>
+          <a href="#work">Work</a>
+          <a href="#education">Education</a>
+          <a href="#researchinterests">Research Interests</a>
+          <a href="#projects">Projects</a>
+          <a href="#publications">Publications</a>
+          
+          <!-- <a href="#">Link 3</a> -->
+        </div>
+      </div>
+      
+      
+      
+      
+      <!-- TEACHING  -->
+      <!-- <a id="teaching" href="#teaching"  onclick='contentUpdate("teaching.html");'>Teaching</a> -->
+      <div class="dropdown" href="#teaching">
+        <a class="dropbtn" id="teaching" href='#' onclick='contentUpdate("teaching.html");'>
+          Teaching
+        </a>
+        <div class="dropdown-content" onclick='contentUpdate("teaching.html");'>
+          <a onclick='contentUpdate("teaching.html");' href="#fascinating_concepts_section">Fascinating concepts</a>
+          <a href="#courses_section">Courses</a>
+          <!-- <a href="#webprojects">Web projects</a> -->
+          
+          <!-- <a href="#">Link 3</a> -->
+        </div>
+      </div>
+      
+      
+      <!-- WEB PROJECTS  -->
+      <div class="dropdown" href="#webprojects">
+        <a class="dropbtn" id="webprojects" href='#' onclick='contentUpdate("webprojects.html");'>
+          Web demos
+        </a>
+        <div class="dropdown-content" onclick='contentUpdate("webprojects.html");'>
+          <a target="_blank" href="https://VivekTRamamoorthy.github.io/TopOptWeb"> Topology optimisation in web platform</a>
+          <a target="_blank" href="https://VivekTRamamoorthy.github.io/GeneticAlgorithmTutorial"> Genetic algorithm tutorial</a>
+          <a target="_blank" href="https://VivekTRamamoorthy.github.io/Nurse-scheduler"> Nurse scheduling tool</a>
+          <a target="_blank" href="https://VivekTRamamoorthy.github.io/MatlabJS"> MATLAB library for Javascript</a>
+          <a target="_blank" href="https://VivekTRamamoorthy.github.io/SpringMassDamping"> Spring mass demo</a>
+          <!-- <a href="#webprojects">Web projects</a> -->
+          <!-- <a href="#">Link 3</a> -->
+        </div>
+      </div>
+      
+      
+      <!-- CONTACT -->
+      <a id="contact" href="#"  onclick='contentUpdate("contact.html");'>Contact</a>
+      
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
   
   
   <!-- ACTUAL PAGE CONTENT-->
-  <div id="content" ></div>
+  <div id="content" >
+    
+    
+    <h1 > Vivek T. Ramamoorthy </h1>
+    <div class="biobox">
+      <!-- PHOTO -->
+      <div class="dpbox" >
+        <div class="dp" >
+          <img style="border-radius: 50%; width:100%; height:100%;"
+          src="https://lh3.googleusercontent.com/CeLwVIyY7IRaUyWmd-9spMrne0rCTb4jGtehxf5qatccKJvwWmxp6OS7rzG9d26pPPRTst3AIukTTL5VyC2GFO5Z1xLuVnUmJLEU763dtsR-385Aw6hV-XuN2z09zVqItCYg6BsNBENRUpbT8DkEVFNcUlaI92KglyIHeTqV-bNj9u4yTklYgG0ygfva7KyV4D5fYlOFRsVpANGusx-meXrbDuGOadkJizC0o7n1lVpPVULanVHtRuqVpzga63eXUjkedCacwtby4S2T8oJ2ilc4obwhrJblVYYMNAU3Wn4S8DLy1hJ3G_oXAAGFpAwbBenRSDJ2C1dIMANfyV7ADwZQwWlNtqG-subT6lQvVjMpIvz6FuKp3gzLx89BIPca4wIvSyfQZPMgLH_kV1829p_EidCqI4Lobqox7VGITim1ILe_LSPH4qiz0MefT3gYKT4E43HLdOfpb0Rdwo11zgUgh97HQWvBVe4xU6lVT-bY7sv9nrNLD_U67M9CZBlFfyIaz-qXvhHlJQSULA2cDThrpJw0acQ8YXxT_2X9PDtgwHz6CZmNWFlCNtOxCh9smR8AYjOLatADpJg4ND7rNMI_yNVo72IByV2duRYwnHODpVl3kQ_0YvGURMbWeXLu0WeUHYrP0q0Dtec9CIh1I-7tMe_qy_GS7zTfUFCL-saNRttfxAIZ5UO1f93jG5iEOgLBtCJne7ipWq0r3Fb66Wru=w348-h298-no?authuser=0">
+        </div>
+      </div>
+      
+      
+      <!-- SHORT PROFILE -->
+      <div class="shortbio">
+        <strong>PhD student in Computer Science</strong>
+        <div> University of Nottingham </div><div>(2018 - present) </div><br>
+        <strong>Scientific Officer</strong>
+        <div>Atomic Energy Regulatory Board </div><div>(2015 - 18) </div><br>
+        <strong>M.Tech Mechanical Design</strong>
+        <div>Indian Institute of Technology Madras </div><div>(2013 - 15) </div><br>
+        <strong>B.E Mechanical Engineering</strong>
+        <div>Sri Sairam Engineering College </div><div>(2009 - 13) </div> <br>
+      </div>
+      
+    </div>
+    
+    <br>
+    <br>
+    <center  > Hi there! </center><br>
+    As part of the <a href="https://www.nottingham.ac.uk/research/groups/col/index.aspx">Computation Optimisation and Learning Lab</a> (COL) at UoN, 
+    I explore areas at the interface of artificial intelligence (metaheuristics, machine learning) 
+    and mechanical design (topology optimisation in acoustic porous materials). 
+    
+    <br>
+    <br>
+    
+    I am fascinated by science and nature. I love learning new and interesting concepts. 
+    If you do too, you might like a compilation of concepts that I found fascinating in the
+    <a onclick='contentUpdate("teaching.html");' href="#">Teaching</a> section. 
+    If you think I should check out something else, let me know ! :-)
+    
+    <br>
+    <br>
+    
+    I find true happiness in seeing the enlightenment in one's face when they learn and truly understand something. 
+    I have figured that I am  cut out for teaching and I aspire to be a really good teacher some day.  
+    
+    
+    <br>
+    <br>
+    
+    I also have some cool games and demos. Check them out too. Have fun!
+    
+    
+    <br>
+    <br>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
   <br><br><br><br>
   
   
