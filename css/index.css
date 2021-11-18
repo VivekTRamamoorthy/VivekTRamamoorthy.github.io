@@ -3,8 +3,13 @@
 body{
   margin: 0;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  background-image:linear-gradient(45deg,black,cyan,red) ;
+  background-image:linear-gradient(45deg,red,yellow,cyan,green) ;
+  --header-load-time: 400ms;
+  --content-load-time: 400ms;
+  --dp-load-time:400ms;
+  --dp-load-delay: calc(var(--header-load-time)+var(--content-load-time))
 }
+
 a{
   color: dodgerblue;
 
@@ -20,6 +25,9 @@ a:hover{
   text-align: left;
   background-image: linear-gradient(to right,whitesmoke,lightyellow);
   min-height:100%;
+  animation: content-load var(--content-load-time) linear var(--header-load-time);
+  transform: scale(0) ;
+  animation-fill-mode: forwards;
 }
 
 .biobox {
@@ -55,7 +63,10 @@ a:hover{
   float:left;
   overflow:auto;
   position: relative;
-
+  animation: dp-load var(--dp-load-time) ease-in 800ms;
+  animation-fill-mode: forwards;
+  transform: translateX(-200%);
+  opacity:0;
 }
 
 
@@ -171,3 +182,44 @@ li{
 
 }
 
+
+@keyframes content-load {
+  0% {
+    transform: scale(0) ;
+    opacity: 0;
+  }
+  25%{ 
+    transform: scale(0.85) ;
+    opacity: 0.25;
+  }
+  50%{ 
+    transform: scale(0.95) ;
+    opacity:.5;
+  }
+  75%{ 
+    transform: scale(1.05) ;
+    opacity: .75;
+  }
+  100% {
+    transform: scale(1) ;
+    opacity:1
+  }
+  
+}
+
+@keyframes dp-load {
+  0% {
+    transform: translateX(-100%) rotate(-100deg);
+    opacity:0;
+  }
+
+  70%{ 
+    transform: translateX(10%) rotate(10deg) ;
+    opacity:.7;
+  }
+  100% {
+    transform: translateX(0%) rotate(0deg);  
+    opacity:1;
+  }
+  
+}
