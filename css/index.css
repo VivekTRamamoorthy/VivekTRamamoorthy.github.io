@@ -1,13 +1,15 @@
-html{
-  margin:0;
-  position:relative;
+*,*::before,*::after{
+  box-sizing: border-box;
 }
 
 body{
   margin: 0;
-  min-height: 100vh;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  background-image:linear-gradient(45deg,red,yellow,cyan,green) ;
+  padding: 0;
+  width:100%;
+  min-height: 95vh;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-image:linear-gradient(45deg,red,yellow,cyan,green) ; */
+  background-color: hsla(200, 100%, 50%, 1);
   --header-load-time: 400ms;
   --content-load-time: 400ms;
   --dp-load-time:800ms;
@@ -16,16 +18,17 @@ body{
   
 }
 
+
+
 a{
   color: dodgerblue;
-
 }
 
 a:hover{
   background-color: rgba(255,255,0,0.6);
 }
 
-#content {
+.section {
   margin:1% 12%;
   padding: 1% 3%;
   text-align: left;
@@ -135,8 +138,7 @@ li{
 
 footer{
   float:bottom;
-  position: absolute;
-  bottom:0px;
+  bottom:0;
   left:0;
   right:0;
   width:100%;
@@ -157,8 +159,8 @@ footer a{
 
 @media screen and (max-width: 600px) {
 
-  #content {
-    margin: 1% 2%;
+  .section {
+    margin: 4% 4%;
 
   }
   .biobox {

@@ -6,7 +6,8 @@
   <meta name="HandheldFriendly" content="true" />
   <meta name="MobileOptimized" content="320" />
   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
-  
+  <meta name="keywords" content="Vivek, Thaminni, Ramamoorthy, TR, homepage, COL, Nottingham, University, Computer, Science, IITM, AERB ">
+  <meta name="description" content="PhD student at University of Nottingham">
   <title>Vivek T R</title>
   
   <!-- Load styles -->
@@ -23,19 +24,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/libs/js/jquery-3.5.1.min.js"><\/script>')</script>
   
-  <!-- LOAD Mathjax for math equations \( \) for inline \[ \] for separate-->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      },
-      svg: {
-        fontCache: 'global'
-      }
-    };
-  </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+  <!-- LATEX equation interpreter -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+  
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+  
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
   
   <!-- LOAD FUNCTION  -->
   <script>
@@ -142,8 +139,8 @@
   </div>
   
   
-  <!-- ACTUAL PAGE CONTENT-->
-  <div id="content" >
+  <!-- HOME-->
+  <div class="section" id="content" >
     
     
     <h1 > Vivek T. Ramamoorthy </h1>
@@ -151,8 +148,8 @@
       <!-- PHOTO -->
       <div class="dpbox" >
         <div class="dp" >
-          <img style="border-radius: 50%; width:100%; height:100%;"
-          src="https://lh3.googleusercontent.com/CeLwVIyY7IRaUyWmd-9spMrne0rCTb4jGtehxf5qatccKJvwWmxp6OS7rzG9d26pPPRTst3AIukTTL5VyC2GFO5Z1xLuVnUmJLEU763dtsR-385Aw6hV-XuN2z09zVqItCYg6BsNBENRUpbT8DkEVFNcUlaI92KglyIHeTqV-bNj9u4yTklYgG0ygfva7KyV4D5fYlOFRsVpANGusx-meXrbDuGOadkJizC0o7n1lVpPVULanVHtRuqVpzga63eXUjkedCacwtby4S2T8oJ2ilc4obwhrJblVYYMNAU3Wn4S8DLy1hJ3G_oXAAGFpAwbBenRSDJ2C1dIMANfyV7ADwZQwWlNtqG-subT6lQvVjMpIvz6FuKp3gzLx89BIPca4wIvSyfQZPMgLH_kV1829p_EidCqI4Lobqox7VGITim1ILe_LSPH4qiz0MefT3gYKT4E43HLdOfpb0Rdwo11zgUgh97HQWvBVe4xU6lVT-bY7sv9nrNLD_U67M9CZBlFfyIaz-qXvhHlJQSULA2cDThrpJw0acQ8YXxT_2X9PDtgwHz6CZmNWFlCNtOxCh9smR8AYjOLatADpJg4ND7rNMI_yNVo72IByV2duRYwnHODpVl3kQ_0YvGURMbWeXLu0WeUHYrP0q0Dtec9CIh1I-7tMe_qy_GS7zTfUFCL-saNRttfxAIZ5UO1f93jG5iEOgLBtCJne7ipWq0r3Fb66Wru=w348-h298-no?authuser=0">
+          <img style="border-radius: 50%; width:100%; height:100%;" src="https://avatars.githubusercontent.com/u/50669543?v=4">
+          
         </div>
       </div>
       
@@ -215,19 +212,65 @@
   </div>
   <br><br><br><br>
   
-  <!-- FOOTER SECTION  -->
-  <footer>
-    <a href="mailto:vivektramaamoorthy@gmail.com" target="_blank">Email</a> 
-    | <a href="https://www.linkedin.com/in/vivektr/"  target="_blank">LinkedIn</a> 
-    | <a href="https://github.com/VivekTRamamoorthy" target="_blank">Github</a> 
-    | <a href="https://www.researchgate.net/profile/Vivek-Ramamoorthy" target="_blank">Researchgate</a> 
+  
+  <div class="section" id="contacts" href="#">
     
-  </footer>
-
+    <h1>Contact</h1>
+    
+    <!-- <h3>Email</h3> -->
+    <center>
+      vivek.thaminniramamoorthy@nottingham.ac.uk
+      vivektramamoorthy@gmail.com 
+      
+      <br>
+      <!-- <h3>Mail</h3> -->
+      C77, School of Computer Science,<br>Jubilee Campus, <br>University of Nottingham, <br>NG81BB Nottingham, UK 
+    </center>
+    <br>
+    <br>
+    <div class="social" >
+      
+      <a href="https://scholar.google.co.in/citations?user=xutRx6IAAAAJ&hl=en" target="_blank"> 
+        <img class="social-images" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/1024px-Google_Scholar_logo.svg.png" alt="Scholar" width="80" height="80">
+      </a>
+      
+      <a href="https://www.researchgate.net/profile/Vivek-Ramamoorthy" target="_blank"> 
+        <img class="social-images" src="https://media.glassdoor.com/sqll/526840/researchgate-squarelogo-1488811667083.png" alt="Researchgate" width="80" height="80"></a>
+        
+        <a href="https://www.github.com/VivekTRamamoorthy" target="_blank"> 
+          <img class="social-images" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" alt="Github" width="80" height="80">
+        </a>
+        
+        <a href="https://www.linkedin.com/in/vivektr/" target="_blank"> 
+          <img class="social-images" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="80" height="80">
+        </a>
+        
+        <a  href="https://www.facebook.com/vivek.tr/" target="_blank"> 
+          <img class="social-images" src="https://cdn.freebiesupply.com/logos/large/2x/facebook-logo-2019.png" alt="Facebook" width="80" height="80">
+        </a>
+        
+        <a href="https://twitter.com/VTRamamoorthy" target="_blank"> 
+          <img class="social-images"  src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter" width="80" height="80">
+        </a>
+        
+        <a href="https://www.lichess.org/@/inventortwentythree" target="_blank">
+          <img class="social-images" src="https://images.prismic.io/lichess/5cfd2630-2a8f-4fa9-8f78-04c2d9f0e5fe_lichess-box-1024.png" alt="Lichess" width="80" height="80" >
+        </a>
+        
+      </div>
+    </div>
+    <footer>
+      <a href="mailto:vivektramaamoorthy@gmail.com" target="_blank">Email</a> 
+      | <a href="https://www.linkedin.com/in/vivektr/"  target="_blank">LinkedIn</a> 
+      | <a href="https://github.com/VivekTRamamoorthy" target="_blank">Github</a> 
+      | <a href="https://www.researchgate.net/profile/Vivek-Ramamoorthy" target="_blank">Researchgate</a> 
+      
+    </footer>
+    
+    
+    
+    
+  </body>
   
+  </html>
   
-  
-</body>
-
-</html>
-

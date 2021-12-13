@@ -1,4 +1,4 @@
-/* Add a black background color to the top navigation */
+/* Add a black transparent background color to the top navigation */
 .topnav {
   background-color: rgba(0,0,0,0.6);
   /* overflow:hidden; */
