@@ -1,11 +1,14 @@
-/* Add a black transparent background color to the top navigation */
+/* Add a black transparentbackground color to the top navigation */
 .topnav {
   background-color: rgba(0,0,0,0.6);
   /* overflow:hidden; */
   /* float:left; */
   text-align: center;
   animation: topnav-load var(--header-load-time) ease-in;
-  
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index: 1;
 }
 
 
