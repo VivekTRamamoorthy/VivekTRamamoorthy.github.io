@@ -109,6 +109,16 @@ nav a.icon {
     display:block;
     
   }
+
+  /* Do not show the dropdown menu on hover when on mobile */
+.dropdown:hover .dropdown-content {
+  display: none;
+}
+
+nav>a:hover, .dropdown>a:hover {
+  background-color: inherit;
+  color:inherit;
+}
   
   /* nav> a,.dropdown>a  {
     font-size: medium;

@@ -149,7 +149,7 @@ a:hover{
 
 h1 {
   text-align: center;
-  /* color: hsla(200, 100%, 100%, 1); */
+  /* color: dodgerblue; */
   font-size: xx-large;
   font-weight: bold;
 }
@@ -157,13 +157,13 @@ h1 {
 h2 {
   text-align: left;
   font-size: x-large;
-  /* color: rgb(182, 49, 49); */
+  color: rgb(255, 150, 150);
   
 }
 
 h3 {
   text-align: left;
-  /* color: green; */
+  color: lightgreen;
   font-size: large;
 }
 
@@ -205,21 +205,19 @@ li{
 }
 
 footer{
-  float:bottom;
   bottom:0;
   left:0;
   right:0;
   width:100%;
-  background-color: rgba(0,0,0,0.5);
-  /* color: whitesmoke; */
   text-align: center;
   padding:15px;
+  background-color: hsla(var(--hue-contact),var(--saturation), var(--background-lightness),0.8);
 
 }
 
 footer a{
  text-decoration: none;
- /* color:white; */
+ color:white;
 }
 
 
@@ -257,9 +255,6 @@ footer a{
     font-size: large;
   }
 
-  footer a{
-    font-size: small;
-  }
 
 }
 
