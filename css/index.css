@@ -26,15 +26,14 @@ body{
 
 :root{
   --hue:200;
-  --hue-home: 200;
   --hue-profile: 150;
   --hue-teaching: 100;
   --hue-webprojects: 50;
   --hue-contact: 0;
 
   --saturation: 50%;
-  --foreground-lightness:75%;
-  --background-lightness:20%;
+  --foreground-lightness:85%;
+  --background-lightness:10%;
   --anchor-saturation:100%;
   --foreground-color:hsl(var(--hue),var(--saturation), var(--foreground-lightness));
   --background-color:hsl(var(--hue),var(--saturation), var(--background-lightness));
@@ -69,6 +68,12 @@ a:hover{
   animation-fill-mode: forwards;
 }
 
+#home{
+  --hue:var(--hue-home);
+  --foreground-color:hsl(var(--hue),var(--saturation), var(--foreground-lightness));
+  --background-color:hsl(var(--hue),var(--saturation), var(--background-lightness));
+  --anchor-color:hsl(var(--hue), var(--anchor-saturation), var(--foreground-lightness));
+}
 
 #profile{
   --hue:var(--hue-profile);
