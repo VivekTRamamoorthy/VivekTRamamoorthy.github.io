@@ -1,42 +1,44 @@
 /* Add a black transparentbackground color to the top navigation */
-.topnav {
-  background-color: rgba(0,0,0,0.6);
-  /* overflow:hidden; */
-  /* float:left; */
+nav {
+  background-color: rgba(0,0,0,.6);
   text-align: center;
   animation: topnav-load var(--header-load-time) ease-in;
   position:fixed;
   top:0;
   width:100%;
   z-index: 1;
+  display:flex;
+  justify-content: flex-end;
 }
 
 
 /* Style the links inside the navigation bar */
-.topnav a, .dropdown.dropbtn {
-  color: #f2f2f2;
+nav > a, .dropdown>a {
+  color: white;
+  font-weight: bold;
+  border-radius: 5%;
   text-align: center;
   padding: 15px 15px;
   text-decoration: none;
   font-size: large;
-  margin:0;
+  margin:.5rem;
   /* animation: topnav-link-load 300ms ease-in; */
-
+  
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+nav > a:hover, .dropdown>a:hover {
   border:none;
 }
 
 
 /* COMMON FLOAT */
-.dropdown, .topnav a{
+.dropdown, nav a{
   display: inline-block;
 }
 
 /* Add a red background color to navbar links on hover */
-.topnav a:hover, .dropdown:hover .dropbtn {
+nav>a:hover, .dropdown>a:hover {
   background-color: red;
   border: none;
   color:white;
@@ -76,27 +78,43 @@
 }
 
 /* Hide the hamburger icon that should open and close the topnav on small screens */
-.topnav a.icon {
+nav a.icon {
   display: none;
 }
 
-
+.hamburger{
+  display:none;
+}
 
 /* MOBILE */
 @media screen and (max-width: 768px) {
   
+  .hamburger{
+    display: block;
+  float:left;
+    background-color: white;
+    
+  }
+  nav{
+    flex-direction: column;
+    display:flex;
+  }
+  nav>a, .dropdown>a{
+    display:none;
+  }
+  nav>a.is-active, .dropdown>a.is-active {
+    display:block;
+    
+  }
   
-  
-  .topnav a {
+  /* nav> a,.dropdown>a  {
     font-size: medium;
     margin:0%;
     padding: 15px 5px;
     
-  }
+  } */
   
-  .dropdown.dropbtn {
-   font-size: medium;
-  }
+  
   
 }
 

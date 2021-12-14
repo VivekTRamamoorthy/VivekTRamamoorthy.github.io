@@ -12,12 +12,13 @@
   
   <!-- Load styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/index.css">
-  <!-- <link rel="stylesheet" type="text/css" href="css/subnav.css"> -->
-  <link rel="stylesheet" type="text/css" href="css/navigator.css">
-  <link rel="stylesheet" type="text/css" href="css/playbutton.css">
-  <link rel="stylesheet" type="text/css" href="css/social.css">
+  <link rel="stylesheet" type="text/css" href="css/hamburgers.css">
   <!-- <link rel="stylesheet" type="text/css" href="css/megamenu.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/subnav.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/playbutton.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/social.css">
+  <link rel="stylesheet" type="text/css" href="css/navigator.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
   
   
   <!-- LOAD jQuery: try CDN first, if not then local file-->
@@ -34,36 +35,24 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
   onload="renderMathInElement(document.body);"></script>
   
-  <!-- LOAD FUNCTION  -->
-  <script>
-    function contentUpdate(pageName){ $('#content').load(pageName); }
-  </script>
-  
-  <!-- LOAD HEADER AND FOOTER using jQuery -->
-  <!-- <script>  
-    // $(function(){ $("#header").load("header.html"); });  
-    // $(function(){ $("#content").load("home.html"); });  
-    // $(function(){ $("#footer").load("footer.html"); });  
-  </script> -->
-  
-  
-  <script> 
-    function contentUpdate(pageName){ 
-      $('#content').load(pageName); 
-    } 
-    
-  </script>
-  
+ 
   
 </head>
 <body>
   
-  
-  <!-- HEADER SECTION -->
-  <div id="header">
-    <!-- TOP NAVIGATION MENU  -->
-    <div class="topnav" id="myTopnav">
-      
+
+
+   <!-- TOP NAVIGATION MENU  -->
+    <nav>
+      <div class="hamburger-container">
+        <button class="hamburger hamburger--arrow" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+
+
       <!-- HOME -->
       <a href='#content' >Home</a>
       
@@ -83,7 +72,7 @@
       </div> -->
       
       
-      
+
       
       <!-- TEACHING  -->
       <a href="#teaching" >Teaching</a>
@@ -99,26 +88,26 @@
       
       
       <!-- WEB PROJECTS  -->
-      <a href="#webprojects" >Web projects</a>
+      <!-- <a href="#webprojects" >Web projects</a> -->
 
-      <!-- <div class="dropdown" href="#webprojects">
-        <a class="dropbtn" id="webprojects" href='#' onclick='contentUpdate("webprojects.html");'>
+      <div class="dropdown" >
+        <a class="dropbtn"  href='#webprojects' >
           Web demos
         </a>
-        <div class="dropdown-content" onclick='contentUpdate("webprojects.html");'>
+        <div class="dropdown-content" >
           <a target="_blank" href="https://VivekTRamamoorthy.github.io/TopOptWeb"> Topology optimisation in web platform</a>
           <a target="_blank" href="https://VivekTRamamoorthy.github.io/GeneticAlgorithmTutorial"> Genetic algorithm tutorial</a>
           <a target="_blank" href="https://VivekTRamamoorthy.github.io/Nurse-scheduler"> Nurse scheduling tool</a>
           <a target="_blank" href="https://VivekTRamamoorthy.github.io/MatlabJS"> MATLAB library for Javascript</a>
           <a target="_blank" href="https://VivekTRamamoorthy.github.io/SpringMassDamping"> Spring mass demo</a>
         </div>
-      </div> -->
+      </div>
       
       
       <!-- CONTACT -->
       <a href="#contact">Contact</a>
       
-    </div>
+    </nav>
     
     
     
@@ -442,7 +431,7 @@
   <a target="_blank" href="https://VivekTRamamoorthy.github.io/MatlabJS"> MATLAB library for Javascript</a>
   <br><br> -->
   <br>
-  <div class='quote'> ** Under construction ** 
+  <div class='quote'> * Under construction * 
     <br>
     I plan to add course materials eventually. 
   </div>
@@ -545,8 +534,29 @@ Click on the titles to view them on your browser.
        
     </footer>
     
-    
-    
+    <!-- HAMBURGER MENU -->
+    <script>
+      // Look for .hamburger
+      var hamburger = document.querySelector(".hamburger");
+      var navButtons=document.querySelectorAll("nav>a");
+      var navDropdowns=document.querySelectorAll(".dropdown>a");
+
+      // On click
+      hamburger.addEventListener("click", function() {
+        // Toggle class "is-active"
+        hamburger.classList.toggle("is-active");
+        // Do something else, like open/close menu
+        navButtons.forEach(element=>{element.classList.toggle("is-active")});
+        navDropdowns.forEach(element=>{element.classList.toggle("is-active")});
+        
+      });
+
+
+      // const hue = parseFloat(
+      //       getComputedStyle(document.documentElement).getPropertyValue("--hue")
+      //   )
+      //   document.documentElement.style.setProperty("--hue",hue+delta*0.01);
+    </script>
     
   </body>
   
