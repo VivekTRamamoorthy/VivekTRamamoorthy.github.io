@@ -1,0 +1,84 @@
+body{
+    --dp-load-time:800ms;
+    --dp-load-delay: 1s;
+}
+
+.biobox {
+    width:100%;
+    padding:none; 
+    margin:none;
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+    flex-wrap:wrap;
+    
+}
+
+.shortbio {
+    min-width: 60%;
+    text-align: left;
+    float:left;
+    display:grid;
+    grid-template-columns: 1fr 1fr max-content;
+    row-gap: 1em;
+    column-gap:1em;
+
+}
+.shortbio > .position{
+    font-weight: 900;
+    font-size:x-large;
+    grid-column: 1 / span 3;
+}
+.shortbio > .institute{
+    font-size: small;
+    grid-column: 1 / span 2;
+}
+.shortbio > .year{
+    font-size: small;
+}
+
+
+.dpbox{
+width: max-content;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.dp{
+    animation: dp-load var(--dp-load-time) ease-in var(--dp-load-delay);
+    animation-fill-mode: forwards;
+    opacity:0;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+
+
+/*     
+    .shortbio{
+        text-align: center;
+        display:block;
+        min-width: 300px;
+    } */
+}
+
+
+@keyframes dp-load {
+    0% {
+      transform: translateX(-100%) rotate(-100deg);
+      opacity:0;
+    }
+  
+    70%{ 
+      transform: translateX(10%) rotate(10deg) ;
+      opacity:.7;
+    }
+    100% {
+      transform: translateX(0%) rotate(0deg);  
+      opacity:1;
+    }
+    
+  }
