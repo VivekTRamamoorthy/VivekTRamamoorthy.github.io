@@ -6,6 +6,7 @@
  justify-content: center;
  gap:2rem;
  flex-wrap:wrap;
+ opacity: 1;
 }
 
 #social>a{
@@ -13,7 +14,7 @@
   border-radius: 50%;
   height:4rem;
   width:4rem;
-
+  opacity: 0.8;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +22,7 @@
 }
 
 #social>a:hover{
-  background-color: yellow;
+  opacity: 1;
 }
 
 .social-images{

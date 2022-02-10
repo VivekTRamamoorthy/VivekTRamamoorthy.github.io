@@ -1,0 +1,47 @@
+
+.webproject-box{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:1rem;
+    
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    
+}
+
+.webproject-item{
+    background-color: rgba(255,255,255,0.8) ;
+    color:#333;
+    padding:2rem;
+    width:20rem;
+    height: 20rem;
+    transition: background-color 500ms;
+}
+
+.webproject-item:hover{
+    background-color: lightyellow ;
+    
+    color:black;
+    cursor: pointer;
+}
+
+.webproject-item>h2{
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--background-color);
+    transition: font-size 300ms, padding 300ms, color 300ms;
+}
+
+.webproject-item:hover>h2{
+    
+    font-size: 1.6rem;
+    color:red;
+    padding: 1rem 0rem;
+    
+    
+}
+

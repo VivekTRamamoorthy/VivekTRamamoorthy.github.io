@@ -43,8 +43,7 @@ body{
   background-color: var(--background-color);
   color: var(--foreground-color);
   /* margin:1% 12%; */
-  padding: 1% 10%;
-  padding-top: 10%;
+  padding: 5rem 3rem;
   text-align: left;
   min-height:100vh;
   /* animation: content-load var(--content-load-time) linear var(--header-load-time);
@@ -113,50 +112,6 @@ a:hover{
   --background-color:hsl(var(--hue),var(--saturation), var(--background-lightness));
   --anchor-color:hsl(var(--hue), var(--anchor-saturation), var(--foreground-lightness));
 }
-
-.webproject-box{
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap:2rem;
-
-  justify-content: space-evenly ;
-  align-items: stretch;
-  text-align: center;
-  
-}
-
-.webproject-item{
-  background-color: rgba(255,255,255,0.6) ;
-  color:#333;
-  padding:2rem;
-  width: 20rem;
-}
-
-.webproject-item>h2{
-  padding: 1rem;
-  text-align: center;
-  color: var(--background-color);
-}
-
-
-
-
-.webproject-item:hover{
-  background-color: lightyellow ;
-
-  color:black;
-  cursor: pointer;
-
-
-}
-.webproject-item:hover>h2{
-
-  color:red;
-
-
-}
-
 
 
 
@@ -260,6 +215,7 @@ display:none;
   h2, h3{
     font-size: large;
   }
+
 
 }
 

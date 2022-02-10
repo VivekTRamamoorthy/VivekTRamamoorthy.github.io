@@ -1,59 +1,46 @@
-/* Add a black transparentbackground color to the top navigation */
 nav {
   background-color: rgba(0,0,0,.6);
   text-align: center;
-  /* animation: topnav-load 200ms ease-in 1000ms; */
   position:fixed;
   top:0;
   width:100%;
   z-index: 1;
   display:flex;
   justify-content: center;
-  opacity: 0.2;
+  opacity: 0.05;
   transition: background-color 1s, opacity 1s;
-
 }
 
 nav:hover{
-  opacity: 1;
-
-
+  opacity: 1; 
+  /* navbar visible on hover */
 }
 
-/* Style the links inside the navigation bar */
 nav > a, .dropdown>a {
   color: white;
   font-weight: bold;
-  /* border-radius: 5%; */
   text-align: center;
-  padding: 15px 15px;
+  padding: 1rem;
   text-decoration: none;
   font-size: large;
   margin:.5rem;
-  /* animation: topnav-link-load 400ms ease-in 1000ms; */
   background-color: transparent;
   
 }
 
-/* Change the color of links on hover */
 nav > a:hover, .dropdown>a:hover {
   border:none;
 }
 
 
-/* COMMON FLOAT */
 .dropdown, nav a{
   display: inline-block;
 }
 
-/* Add a red background color to navbar links on hover */
 nav>a:hover, .dropdown>a:hover {
-  background-color: red;
-  border: none;
-  color:white;
+  background-color: rgba(255,0,0,.8);
 }
 
-/* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -64,10 +51,9 @@ nav>a:hover, .dropdown>a:hover {
   transform: translateY(-100%);
   opacity: 0;
   transition: transform 400ms 200ms;
-
+  
 }
 
-/* Links inside the dropdown */
 .dropdown-content >a {
   float: none;
   color: rgba(0,0,0,0.9);
@@ -77,24 +63,20 @@ nav>a:hover, .dropdown>a:hover {
   font-weight: bold;
   display: block;
   text-align: left;
-  /* background-color: #eee; */
 }
 
-/* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: dodgerblue;
   color:#eee;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
   transform: translateY(0);
   opacity:1;
-
+  
 }
 
-/* Hide the hamburger icon that should open and close the topnav on small screens */
 nav a.icon {
   display: none;
 }
@@ -103,7 +85,6 @@ nav a.icon {
   display:none;
 }
 
-/* MOBILE */
 @media screen and (max-width: 768px) {
   
   .hamburger{
@@ -115,6 +96,8 @@ nav a.icon {
   nav{
     flex-direction: column;
     display:flex;
+    opacity:1;
+    
   }
   nav>a, .dropdown>a{
     display:none;
@@ -124,25 +107,16 @@ nav a.icon {
     display:block;
     
   }
-
+  
   /* Do not show the dropdown menu on hover when on mobile */
-.dropdown:hover .dropdown-content {
-  display: none;
-}
-
-nav>a:hover, .dropdown>a:hover {
-  background-color: inherit;
-  color:inherit;
-}
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
   
-  /* nav> a,.dropdown>a  {
-    font-size: medium;
-    margin:0%;
-    padding: 15px 5px;
-    
-  } */
-  
-  
+  nav>a:hover, .dropdown>a:hover {
+    background-color: inherit;
+    color:inherit;
+  }
   
 }
 
