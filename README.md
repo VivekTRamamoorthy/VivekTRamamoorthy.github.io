@@ -1,1 +1,1 @@
-Visit my homepage at [VivekTRamamoorthy.github.io](https://VivekTRamamoorthy.github.io)
+[Visit my homepage](https://VivekTRamamoorthy.github.io)
