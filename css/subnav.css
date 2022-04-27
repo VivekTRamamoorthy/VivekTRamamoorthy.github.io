@@ -1,6 +1,4 @@
-
 nav {
-  /* background-color: gray; */
   color: black;
   animation: nav-load var(--nav-load-time) ease-in;
 }
@@ -45,24 +43,6 @@ nav a {
   font-size: 15px;
   background-color: rgb(164, 236, 154);
 }
-
-/* main {
-  padding: 30px;
-} */
-
-/* h1 {
-  animation: article-load 300ms ease-in var(--article-load-delay);
-  animation-fill-mode: forwards;
-  transform: translateY(-20px);
-  opacity: 0;
-} */
-
-/* p {
-  animation: article-load 300ms ease-in calc(var(--article-load-delay) + 200ms);
-  animation-fill-mode: forwards;
-  transform: translateY(-20px);
-  opacity: 0;
-} */
 
 @keyframes nav-load {
   0% {

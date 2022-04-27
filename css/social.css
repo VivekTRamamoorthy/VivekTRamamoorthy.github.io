@@ -1,4 +1,3 @@
-
 #social{
   display: flex;
   grid-template-columns: repeat(auto-fit, minmax(4rem, 6rem));
@@ -18,7 +17,6 @@
   display:flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 #social>a:hover{
@@ -26,22 +24,13 @@
 }
 
 .social-images{
-
   width: 3rem;
   height: 3rem;
   text-align: center;
   text-decoration: none;
   margin: 0;
   border-radius: 50%;
-  /* margin-bottom: -25px; */
   padding: 0px 0px;
-  /* margin-top:25px; */
   background-color: none;
   border:none;
-  /* display: block; */
-
 }
-
-
-
-

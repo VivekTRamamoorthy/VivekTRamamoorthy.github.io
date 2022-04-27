@@ -16,9 +16,7 @@ nav.visible{
 }
 nav:hover{
   opacity: 1; 
-  /* navbar visible on hover */
 }
-
 nav > a, .dropdown>a {
   color: white;
   font-weight: bold;
@@ -30,20 +28,14 @@ nav > a, .dropdown>a {
   background-color: transparent;
   
 }
-
 nav > a:hover, .dropdown>a:hover {
   border:none;
+  background-color: rgba(255,0,0,.8);
+  color: white;
 }
-
 
 .dropdown, nav a{
   display: inline-block;
-}
-
-nav>a:hover, .dropdown>a:hover {
-  background-color: rgba(255,0,0,.8);
-  color: white;
-
 }
 
 .dropdown-content {
@@ -79,7 +71,6 @@ nav>a:hover, .dropdown>a:hover {
   display: block;
   transform: translateY(0);
   opacity:1;
-  
 }
 
 nav a.icon {
@@ -91,18 +82,15 @@ nav a.icon {
 }
 
 @media screen and (max-width: 768px) {
-  
   .hamburger{
     display: block;
     float:left;
     background-color: white;
-    
   }
   nav{
     flex-direction: column;
     display:flex;
     opacity:1;
-    
   }
   nav>a, .dropdown>a{
     display:none;
@@ -110,19 +98,14 @@ nav a.icon {
   }
   nav>a.is-active, .dropdown>a.is-active {
     display:block;
-    
   }
-  
-  /* Do not show the dropdown menu on hover when on mobile */
   .dropdown:hover .dropdown-content {
     display: none;
   }
-  
   nav>a:hover, .dropdown>a:hover {
     background-color: inherit;
     color:inherit;
   }
-  
 }
 
 

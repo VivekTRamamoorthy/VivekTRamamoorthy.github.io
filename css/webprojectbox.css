@@ -1,14 +1,11 @@
-
 .webproject-box{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap:1rem;
-    
     justify-content: center;
     align-items: stretch;
     text-align: center;
-    
 }
 
 .webproject-item{
@@ -22,7 +19,6 @@
 
 .webproject-item:hover{
     background-color: lightyellow ;
-    
     color:black;
     cursor: pointer;
 }
@@ -37,11 +33,8 @@
 }
 
 .webproject-item:hover>h2{
-    
     font-size: 1.6rem;
     color:red;
     padding: 1rem 0rem;
-    
-    
 }
 

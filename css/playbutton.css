@@ -1,60 +1,54 @@
 .playbutton {
   height: 50px;
-  /* width: 100px; */
   padding: 15px;
-  /* font-size: 24px; */
   text-align: center;
   cursor: pointer;
   outline: none;
-    color: #fff;
-    background-color: #cf5555;
-    border: none;
-    border-radius: 50px;
-    box-shadow: 0 9px #999;
-    text-decoration: none;
-  }
-  
-  .playbutton:hover {background-color: #ce1616}
-  
-  .playbutton:active {
-    background-color: #eb0f0f;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
+  color: #fff;
+  background-color: #cf5555;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 9px #999;
+  text-decoration: none;
+}
+.playbutton:hover {
+  background-color: #ce1616;
+}
+.playbutton:active {
+  background-color: #eb0f0f;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.playbutton a{
+  text-decoration: none;
+  color:white;
+}
 
-  .playbutton a{
-      text-decoration: none;
-      color:white;
-  }
+/* PREVIEW BUTTON */
 
-  /* PREVIEW BUTTON */
-
-  .previewbutton {
-    height: 50px;
-    /* width: 100px; */
-    padding: 15px;
-    /* font-size: 24px; */
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #e3f164;
-    border:  1px black;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    text-decoration: none;
-    margin: auto;
-  }
-  
-  .previewbutton:hover {background-color: #f0ec1a}
-  
-  .previewbutton:active {
-    background-color: #0febc6;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
-
-  .previewbutton a{
-      text-decoration: none;
-      color:black;
-  }
+.previewbutton {
+  height: 50px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #e3f164;
+  border:  1px black;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  text-decoration: none;
+  margin: auto;
+}
+.previewbutton:hover {
+  background-color: #f0ec1a
+}
+.previewbutton:active {
+  background-color: #0febc6;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.previewbutton a{
+  text-decoration: none;
+  color:black;
+}
