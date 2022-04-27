@@ -1,12 +1,9 @@
 *,*::before,*::after{
   box-sizing: border-box;
 }
-
 html{
   scroll-behavior: smooth;
-
 }
-
 body{
   margin: 0;
   width:100%;
@@ -17,10 +14,7 @@ body{
   /* background-image:linear-gradient(45deg,red,yellow,cyan,green) ; */
   --header-load-time: 400ms;
   --content-load-time: 400ms;
-
   color:white;
-
-  
 }
 
 :root{
@@ -42,23 +36,14 @@ body{
 .section {
   background-color: var(--background-color);
   color: var(--foreground-color);
-  /* margin:1% 12%; */
   padding: 5rem 3rem;
   text-align: left;
   min-height:100vh;
-  /* animation: content-load var(--content-load-time) linear var(--header-load-time);
-  transform: translateX(-100%) ; */
-  /* animation-fill-mode: forwards; */
-
 }
 
 .section.hide{
-  /* animation: content-load var(--content-load-time) linear var(--header-load-time); */
   display: none;
 }
-
-
-
 
 a{
   color: #eee ; 
@@ -68,12 +53,9 @@ a{
   text-decoration: none;
 }
 
-
 a:hover{
   background-color: yellow;
   color: #191919; 
-
-  
 }
 
 
@@ -113,11 +95,8 @@ a:hover{
   --anchor-color:hsl(var(--hue), var(--anchor-saturation), var(--foreground-lightness));
 }
 
-
-
 h1 {
   text-align: center;
-  /* color: dodgerblue; */
   font-size: xx-large;
   font-weight: bold;
 }
@@ -156,22 +135,6 @@ li{
   width: 50%;
 }
 
-/* .logo {
-  width: 100%;
-  display:block;
-}
-.logo img{
-  height: 10%; 
-  width: 10%;
-}
-
-.logo p{
-  width:80%; 
-  padding-right: 5%;  
-  vertical-align: center; 
-  float: left;
-} */
-
 footer{
   bottom:0;
   left:0;
@@ -179,9 +142,7 @@ footer{
   width:100%;
   text-align: center;
   padding:2rem;
-  /* --background-color:hsl(var(--hue),var(--saturation), var(--background-lightness)); */
   background-color: #191919;
-  /* background-color: var(--background-color); */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -199,24 +160,14 @@ footer a{
 
 }
 
-/* .hide {
-display:none;
-} */
-
-
 /* MOBILE FRIENDLY */
-
 @media screen and (max-width: 768px) {
-
-
   h1{
     font-size: x-large;
   }
   h2, h3{
     font-size: large;
   }
-
-
 }
 
 
@@ -242,6 +193,5 @@ display:none;
     transform: translateX(0%);
     opacity:1
   }
-  
 }
 

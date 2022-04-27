@@ -9,8 +9,11 @@ nav {
   justify-content: center;
   opacity: 0.05;
   transition: background-color 1s, opacity 1s;
+  animation: maketransparent 2s forwards;
 }
-
+nav.visible{
+  opacity:1;
+}
 nav:hover{
   opacity: 1; 
   /* navbar visible on hover */
@@ -39,6 +42,8 @@ nav > a:hover, .dropdown>a:hover {
 
 nav>a:hover, .dropdown>a:hover {
   background-color: rgba(255,0,0,.8);
+  color: white;
+
 }
 
 .dropdown-content {

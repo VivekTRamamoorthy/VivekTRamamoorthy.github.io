@@ -24,15 +24,13 @@
   
   
   <!-- LOAD jQuery: try CDN first, if not then local file-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/libs/js/jquery-3.5.1.min.js"><\/script>')</script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/libs/js/jquery-3.5.1.min.js"><\/script>')</script> -->
   
   <!-- LATEX equation interpreter -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
-  
   <!-- The loading of KaTeX is deferred to speed up page rendering -->
   <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
-  
   <!-- To automatically render math in text elements, include the auto-render extension: -->
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
   onload="renderMathInElement(document.body);"></script>
@@ -41,9 +39,7 @@
   
 </head>
 <body>
-  
-  
-  
+    
   <!-- TOP NAVIGATION MENU  -->
   <nav>
     <div class="hamburger-container">
@@ -105,22 +101,8 @@
     
   </nav>
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   <!-- HOME-->
   <div class="section" id="home" >
-    
-    
     <h1 > Vivek T. Ramamoorthy </h1>
     <div class="biobox">
       <!-- PHOTO -->
@@ -130,7 +112,6 @@
           
         </div>
       </div>
-      
       
       <!-- SHORT PROFILE -->
       <div class="shortbio">
@@ -159,11 +140,8 @@
     
     <br>
     <br>
-    
     I find true happiness in seeing the enlightenment in one's face when they learn and truly understand something. 
     I have figured that I am  cut out for teaching and I aspire to be a really good teacher some day.  
-    
-    
     <br>
     <br>
     I also have some interactive demos. Check them out too. Have fun! :-)
@@ -274,18 +252,15 @@
     <li>Design of a hydrodynamic under-water remotely operated vehicle</li>
   </div>
   
-  
-  
   <!-- TEACHING  -->
-  
   <div class="section hide" id="teaching">
     <h1>Teaching</h1>
     <h2>Vision</h2>
-    <a href="https://www.youtube.com/watch?v=0kdV3YzN9XU">Game perspective</a> is the perspective of learning through games and interactive demos.
-    While this is not meant to be a replacement for conventional learning (books, lectures, exercises), 
+    <a href="https://www.youtube.com/watch?v=0kdV3YzN9XU">Game perspective</a> is the paradigm of learning through games and interactive demos.
+    While this is not a replacement for conventional learning (books, lectures, exercises), 
     it is the most under-utilised teaching method.<br><br>
     With the ever growing forest of human knowledge, there are plenty of things to learn but life is just too short. <br><br>
-    Through game perspective, I believe knowledge could be assimilated much faster and in a more fun way allowing us to learn more in a given lifetime. 
+    Through game perspective, I believe knowledge could be assimilated faster and in a more fun way allowing us to learn more in a given lifetime. 
     Check out some of my works available in the <a  onclick="unhideElement('webprojects')" href="#">web projects</a> section. 
     Thanks to Luc Jaouen for inpsiring me to make these. Check out his works at 
     <a href="https://apmr.matelys.com">Acoustic Porous Material Recipes</a>.
@@ -293,11 +268,8 @@
     A shoutout to Dan Russell for <a href="https://www.acs.psu.edu/drussell/demos.html">his amazing work</a>.
     <h2 id='fascinating_concepts_section' >Concepts that fascinate me</h2>
     <p>These are some of the concepts that I found intriguing. 
-      It is always interesting to ask people what concepts fascinate them the most. 
-      I always learn something new. 
-      Every person has their own list of things that fascinate them. 
-      Here is mine. 
-      If you aren't familiar with any, do look them up. 
+      It is always interesting to ask people what concepts fascinate them the most, as I always learn something new. 
+      Every person has their own list and here is mine. 
       If you think I have missed something, let me know. :-)
     </p>
     <ol>
@@ -337,9 +309,6 @@
       <li > Theory of vibration and acoustics </li> 
     </ol>
   </div>
-  
-  
-  
   
   <!-- WEB PROJECTS  -->
   
@@ -443,6 +412,8 @@
     <br><br>
     
   </div>
+
+  <!-- FOOTER -->
   <footer>
     <a href="mailto:vivektramamoorthy@gmail.com" target="_blank">Email</a> 
     <a href="https://www.linkedin.com/in/vivektr/"  target="_blank">LinkedIn</a> 
@@ -450,7 +421,7 @@
     <a href="https://www.researchgate.net/profile/Vivek-Ramamoorthy" target="_blank">Researchgate</a>  
   </footer>
   
-  
+  <!-- NAVBAR & HAMBURGER FUNCTIONALITY -->
   <script async="false"> 
     // Look for .hamburger
     var navbar = document.querySelector("nav");
@@ -480,9 +451,11 @@
       hideAllSectionClass()
       let elemToLoad = document.getElementById(elemId);
       elemToLoad.classList.remove("hide");
-      LaTeXrender(document.body);
+      // LaTeXrender(document.body);
       
     }
+    navbar.classList.add("visible");
+    setTimeout(()=>{navbar.classList.remove("visible")},2000 )
     
   </script>
   
