@@ -4,7 +4,7 @@ canvas.width = canvas.clientWidth;
 canvas.height = canvas.clientHeight;
 var c = canvas.getContext("2d");
 //Initialisation
-var stop = false;
+var stop = true;
 var sounds = false;
 var firstmouseaction = false;
 var fullscreentoggle = false;
@@ -15,7 +15,7 @@ function soundToggle() {
   if (sounds) {
     console.log("Sounds turned on");
   } else {
-    console.log("Run turned off");
+    console.log("Sounds turned off");
   }
 }
 function runToggle() {
@@ -45,8 +45,8 @@ var mouseclick = {
 };
 var r = 0.1 * canvas.width;
 var dt = 0.1;
-var meanposx = canvas.width / 2; // mean position in x direction
-var meanposy = canvas.height / 2; // mean position in y direction
+var meanposx = canvas.width / 2; 
+var meanposy = canvas.height / 2; 
 var zeta = 0.0;
 const k = 4 * Math.PI ** 2;
 const m = 1;
@@ -211,8 +211,8 @@ class Mass {
 }
 
 // Creating a new mass object
-// syntax for Mass(x,y,dy,m,k,zeta)
-var mass1 = new Mass(0.5 * canvas.width, -canvas.width / 2 + r, 0, m, k, 0.02);
+// constructor Mass(x,y,dy,m,k,zeta)
+var mass1 = new Mass(0.5 * canvas.width, -canvas.width / 2 + 2*r, 0, m, k, 0.02);
 
 // Event listener for window resizing
 canvas.addEventListener("resize", function () {
@@ -228,13 +228,11 @@ function updateMeanPositions() {
   console.log("updating mean positions");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  meanposx = canvas.width / 2; // update mean position in x direction
-  meanposy = canvas.height / 2; // update mean position in y direction
+  meanposx = canvas.width / 2; 
+  meanposy = canvas.height / 2; 
   console.log(canvas.width + " " + canvas.height);
   r = 0.05 * canvas.width;
-
   mass1.update(0);
-  // CLEAR THE CANVAS
   c.clearRect(0, 0, canvas.width, canvas.height);
 }
 let previoustime = 0;
@@ -244,11 +242,9 @@ function animate(timestamp) {
   let delta = timestamp - previoustime;
   previoustime = timestamp;
   dt = delta / 1000;
-  // CLEAR THE CANVAS
   c.clearRect(0, 0, canvas.width, canvas.height);
-  // UPDATE THE POSITION OF THE MASSES AND DRAW
   mass1.update(dt);
-  // CALL ANIMATION LOOP
   requestAnimationFrame(animate);
 }
-window.requestAnimationFrame(animate);
+window.requestAnimationFrame(animate)
+setTimeout(()=>{ runToggle()},2000);

@@ -84,7 +84,7 @@ nav a.icon {
 @media screen and (max-width: 768px) {
   .hamburger{
     display: block;
-    float:left;
+    float:right;
     background-color: white;
   }
   nav{
@@ -94,7 +94,7 @@ nav a.icon {
   }
   nav>a, .dropdown>a{
     display:none;
-    animation: topnav-load 400ms ease-in-out;
+    animation: topnav-load 200ms ease-in-out;
   }
   nav>a.is-active, .dropdown>a.is-active {
     display:block;
@@ -111,7 +111,7 @@ nav a.icon {
 
 @keyframes topnav-load {
   0% {
-    transform: translateY(-500%);
+    transform: translateY(-200%);
   }
   100% {
     transform: translateY(0);

@@ -1,21 +1,15 @@
-function displayAlert(){
-
-    let div = document.createElement('div')
-    div.style = "position:absolute;top"
-
-    let closeBtn = document.createElement('button')
-    copyBtn.style="position:relative; top:1rem; right: 1rem;"
-
-    div.appendChild(copyBtn)
-
-    let copyBtn = document.createElement('button')
-    copyBtn.style="position:relative; top:1rem; right: 1rem;"
-
-    div.appendChild(copyBtn)
+function displayBibTex(filename) {
 
 
-    
-
-
-
+  fetch("pdf/"+filename)
+.then((result) => {
+    result.text()
+    .then(text=> {
+        navigator.clipboard.writeText(text)
+        softalert(text)
+        text = text.split('\\').join('\\\\')
+        console.log(text);
+    })
+})
 }
+

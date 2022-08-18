@@ -1,0 +1,63 @@
+.SoftAlertContainer{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background-color: rgba(0,0,0,.6);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SoftAlert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:0.5rem;
+  padding:0.5rem;
+  justify-content: center;
+  width: min(70vw,750px);
+  color: black;
+  background-color: #fff;
+}
+.SoftAlertText {
+  width:100%;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 1rem;
+  font-weight: normal;
+  line-height: 1.2rem;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.SoftAlertButtonsDiv{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.SoftAlertCloseBtn,.SoftAlertCopyBtn {
+  width: auto;
+  height: 2rem;
+  border: none;
+  box-shadow: none;
+  font-size: 1rem;
+  z-index: 101;
+}
+.SoftAlertCloseBtn{
+  background-color: rgba(255, 0, 0, 0.9);
+  color: white;
+
+}
+
+
+.SoftAlertCopyBtn {
+
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+
+}

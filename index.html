@@ -30,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="css/navigator.css" />
     <link rel="stylesheet" type="text/css" href="css/biobox.css" />
     <link rel="stylesheet" type="text/css" href="css/webprojectbox.css" />
+    <link rel="stylesheet" type="text/css" href="css/softalert.css" />
 
     <!-- LATEX equation interpreter -->
     <link
@@ -51,8 +52,9 @@
       onload="renderMathInElement(document.body);"
     ></script>
 
-
     <script defer src="js/SpringMass.js"></script>
+    <script defer src="js/softalert.js"></script>
+    <script defer src="js/displayBibTex.js"></script>
   </head>
   <body>
     <!-- TOP NAVIGATION MENU  -->
@@ -255,7 +257,7 @@
               ></a>
             </div>
             <div class="bibtex">
-              <a href="pdf/ramamoorthy2021comparison.bib">BibTex</a>
+              <a href="#pdf/ramamoorthy2021comparison.bib" onclick="displayBibTex('ramamoorthy2021comparison.bib')" >BibTex</a>
             </div>
             <div class="bibtex">
               <a target="_blank" href="pdf/ramamoorthy2021comparison.pdf"
