@@ -22,8 +22,9 @@ function softalert(text) {
   copyBtn.classList.add("SoftAlertCopyBtn");
   copyBtn.innerText = "COPY";
   copyBtn.onclick = () => {
-    navigator.clipboard.writeText(text);
-    disappearingMessage("Copied to clipboard!",800)
+    copyToClipboard("I'm going to the clipboard !")
+    .then(() => disappearingMessage("Copied to clipboard!",800))
+    .catch(() => disappearingMessage("Could not copy!",1000));
     container.remove();
   };
   buttonsDiv.appendChild(copyBtn);
@@ -60,4 +61,29 @@ function disappearingMessage(text,timer = 300) {
 
     setTimeout(()=>{container.remove()},timer);
 
+}
+
+// return a promise
+function copyToClipboard(textToCopy) {
+  // navigator clipboard api needs a secure context (https)
+  if (navigator.clipboard && window.isSecureContext) {
+      // navigator clipboard api method'
+      return navigator.clipboard.writeText(textToCopy);
+  } else {
+      // text area method
+      let textArea = document.createElement("textarea");
+      textArea.value = textToCopy;
+      // make the textarea out of viewport
+      textArea.style.position = "fixed";
+      textArea.style.left = "-999999px";
+      textArea.style.top = "-999999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      return new Promise((res, rej) => {
+          // here the magic happens
+          document.execCommand('copy') ? res() : rej();
+          textArea.remove();
+      });
+  }
 }
