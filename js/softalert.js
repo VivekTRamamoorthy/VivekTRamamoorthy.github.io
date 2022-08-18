@@ -23,6 +23,7 @@ function softalert(text) {
   copyBtn.innerText = "COPY";
   copyBtn.onclick = () => {
     navigator.clipboard.writeText(text);
+    disappearingMessage("Copied to clipboard!",800)
     container.remove();
   };
   buttonsDiv.appendChild(copyBtn);
@@ -40,6 +41,23 @@ function softalert(text) {
   document.querySelector("body").appendChild(container);
 }
 
-function disappearingMessage(text) {
-    
+function disappearingMessage(text,timer = 300) {
+    let container = document.createElement("div");
+    container.classList.add("SoftAlertContainer");
+    container.onclick = (e) => {
+      if (e.target === container) {
+        container.remove();
+      }
+    };
+
+    let div = document.createElement("div");
+    div.classList.add("DisappearingMessage");
+    div.innerText= text;
+        container.appendChild(div);
+        document.querySelector("body").appendChild(container);
+
+
+
+    setTimeout(()=>{container.remove()},timer);
+
 }
