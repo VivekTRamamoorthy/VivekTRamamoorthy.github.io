@@ -13,21 +13,12 @@ function soundToggle() {
   firstmouseaction = true;
   sounds = !sounds;
   if (sounds) {
-    console.log("Sounds turned on");
   } else {
-    console.log("Sounds turned off");
   }
 }
 function runToggle() {
   firstmouseaction = true;
   stop = !stop;
-  if (stop) {
-    console.log("stop ", stop);
-    console.log("Run turned off");
-  } else {
-    console.log(stop);
-    console.log("Run turned on");
-  }
 }
 
 //  VARIABLES
@@ -225,12 +216,10 @@ document.addEventListener("fullscreenchange", function () {
 });
 
 function updateMeanPositions() {
-  console.log("updating mean positions");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
   meanposx = canvas.width / 2; 
   meanposy = canvas.height / 2; 
-  console.log(canvas.width + " " + canvas.height);
   r = 0.05 * canvas.width;
   mass1.update(0);
   c.clearRect(0, 0, canvas.width, canvas.height);
