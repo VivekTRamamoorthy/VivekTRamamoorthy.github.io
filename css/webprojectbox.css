@@ -1,3 +1,6 @@
+#webprojects{
+    padding: 5rem 5vw;
+}
 .webproject-box{
     display:flex;
     flex-direction: row;
@@ -7,7 +10,6 @@
     align-items: stretch;
     text-align: center;
 }
-
 .webproject-item{
     background-color: rgba(255,255,255,0.8) ;
     color:#333;
@@ -16,13 +18,11 @@
     height: 20rem;
     transition: background-color 500ms;
 }
-
 .webproject-item:hover{
     background-color: lightyellow ;
     color:black;
     cursor: pointer;
 }
-
 .webproject-item>h2{
     padding: 1rem;
     text-align: center;
@@ -31,7 +31,6 @@
     color: var(--background-color);
     transition: font-size 300ms, padding 300ms, color 300ms;
 }
-
 .webproject-item:hover>h2{
     font-size: 1.6rem;
     color:red;
