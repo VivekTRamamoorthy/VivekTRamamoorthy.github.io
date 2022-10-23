@@ -383,7 +383,7 @@
       <h2 id="projects">PROJECTS</h2>
       <h3>Ph. D student at the University of Nottingham</h3>
       <li>Topology Optimisation in acoustics of porous materials.</li>
-      <li>Several other <a href="#webprojects">web projects</a></li>
+      <li>Several other <a href="#webprojects" onclick = "unhideElement('webprojects')">web projects</a></li>
       <h3>Atomic Energy Regulatory Board</h3>
       <li>Seismic margin analysis</li>
       <h3>Master of Technology</h3>
@@ -512,7 +512,7 @@
         >
           <h2>Damping ratio demo <i class="fa fa-external-link"></i></h2>
           <div class="ext-link"></div>
-          An interactive demo for understanding the damping ratio. 
+          An interactive demo to get an intuition for the damping ratio. 
         </div>
 
         <div
@@ -712,10 +712,21 @@
         elemToLoad.classList.remove("hide");
         // LaTeXrender(document.body);
       };
+      // autohide the nav bar
       navbar.classList.add("visible");
       setTimeout(() => {
         navbar.classList.remove("visible");
       }, 2000);
+      // window url load ..../#webprojects
+      window.addEventListener('DOMContentLoaded',()=>{
+        let currentURL = window.location.href
+        let splitURL = currentURL.split('#')
+        if(splitURL.length>1){
+          let currentSection = splitURL[splitURL.length-1];
+          unhideElement(currentSection)
+        }
+      })
+
     </script>
   </body>
 </html>
