@@ -10,7 +10,7 @@ body{
   margin: 0;
   width:100%;
   min-height: 95vh;
-  font-family:  Geneva, Verdana, sans-serif;
+  font-family:  Geneva, Verdana, Tahoma, sans-serif;
   font-weight: bold;
   background-color: hsla(200,100%,10%,1);
   --header-load-time: 400ms;

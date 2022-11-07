@@ -17,18 +17,18 @@ body{
 }
 
 .shortbio {
-    min-width: 60%;
+    /* min-width: 60%; */
     text-align: left;
     float:left;
     display:grid;
     grid-template-columns: 1fr 1fr max-content;
-    row-gap: 1em;
+    row-gap: 0.75rem;
     column-gap:1em;
-
+    
 }
 .shortbio > .position{
     font-weight: 900;
-    font-size:x-large;
+    font-size: large;
     grid-column: 1 / span 3;
 }
 .shortbio > .institute{
@@ -41,7 +41,7 @@ body{
 
 
 .dpbox{
-width: max-content;
+    width: max-content;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -55,9 +55,9 @@ width: max-content;
 
 @media screen and (max-width: 768px) {
     
-
-
-/*     
+    
+    
+    /*     
     .shortbio{
         text-align: center;
         display:block;
@@ -68,17 +68,17 @@ width: max-content;
 
 @keyframes dp-load {
     0% {
-      transform: translateX(-100%) rotate(-100deg);
-      opacity:0;
-    }
-  
-    70%{ 
-      transform: translateX(10%) rotate(10deg) ;
-      opacity:.7;
-    }
-    100% {
-      transform: translateX(0%) rotate(0deg);  
-      opacity:1;
+        transform: translateX(-100%) rotate(-100deg);
+        opacity:0;
     }
     
-  }
+    70%{ 
+        transform: translateX(10%) rotate(10deg) ;
+        opacity:.7;
+    }
+    100% {
+        transform: translateX(0%) rotate(0deg);  
+        opacity:1;
+    }
+    
+}
