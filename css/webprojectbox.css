@@ -25,7 +25,7 @@
     background-color: lightyellow ;
     color:black;
     cursor: pointer;
-    transform: rotatey(20deg);
+    transform: rotatey(6deg);
 }
 .webproject-item>h2{
     padding: 1rem;
