@@ -232,6 +232,10 @@ function animate(timestamp) {
   previoustime = timestamp;
   dt = delta / 1000;
   c.clearRect(0, 0, canvas.width, canvas.height);
+  c.font = "15px Arial black";
+  c.fillStyle = "rgb(0,0,0)";
+  c.textAlign = "center";
+  c.fillText('Drag and drop me',canvas.width/2,canvas.height/4)
   mass1.update(dt);
   requestAnimationFrame(animate);
 }
