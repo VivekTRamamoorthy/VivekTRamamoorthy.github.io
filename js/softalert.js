@@ -22,7 +22,7 @@ function softalert(text) {
   copyBtn.classList.add("SoftAlertCopyBtn");
   copyBtn.innerText = "COPY";
   copyBtn.onclick = () => {
-    copyToClipboard("I'm going to the clipboard !")
+    copyToClipboard(text)
     .then(() => disappearingMessage("Copied to clipboard!",800))
     .catch(() => disappearingMessage("Could not copy!",1000));
     container.remove();
