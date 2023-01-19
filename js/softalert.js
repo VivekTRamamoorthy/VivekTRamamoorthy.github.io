@@ -65,9 +65,8 @@ function disappearingMessage(text,timer = 300) {
 
 // return a promise
 function copyToClipboard(textToCopy) {
-  // navigator clipboard api needs a secure context (https)
   if (navigator.clipboard && window.isSecureContext) {
-      // navigator clipboard api method'
+      // navigator clipboard api
       return navigator.clipboard.writeText(textToCopy);
   } else {
       // text area method
@@ -81,7 +80,6 @@ function copyToClipboard(textToCopy) {
       textArea.focus();
       textArea.select();
       return new Promise((res, rej) => {
-          // here the magic happens
           document.execCommand('copy') ? res() : rej();
           textArea.remove();
       });
