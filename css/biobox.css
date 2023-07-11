@@ -28,7 +28,7 @@ body{
 }
 .shortbio > .position{
     font-weight: 900;
-    font-size: large;
+    font-size: medium;
     grid-column: 1 / span 3;
 }
 .shortbio > .institute{

@@ -54,7 +54,7 @@
 
     <!-- PROFILE -->
     <!-- <a href='#profile' >Profile</a> -->
-    <div class="dropdown" onclick="unhideElement('profile')">
+    <!-- <div class="dropdown" onclick="unhideElement('profile')">
       <a class="dropbtn" href="#profile">Profile</a>
       <div class="dropdown-content">
         <a href="#education">Education</a>
@@ -63,6 +63,21 @@
         <a href="#researchinterests">Research Interests</a>
         <a href="#projects">Projects</a>
       </div>
+    </div> -->
+
+    <!-- RESEARCH -->
+    <!-- <a href='#profile' >Profile</a> -->
+    <div class="dropdown" onclick="unhideElement('research')">
+      <a class="dropbtn" href="#research">Research</a>
+      <div class="dropdown-content">
+        <!-- <a href="#education">Education</a>
+        <a href="#work">Work</a> -->
+        <a href="#keywords">Keywords</a>
+        <a href="#summary">Summary</a>
+        <a href="#publications">Publications</a>
+        <!-- <a href="#projects">Projects</a> -->
+        <a href="#current_projects">Current projects</a>
+      </div>
     </div>
 
     <!-- TEACHING  -->
@@ -70,9 +85,9 @@
     <div class="dropdown" onclick="unhideElement('teaching')">
       <a class="dropbtn" href="#teaching"> Teaching </a>
       <div class="dropdown-content">
-        <a href="#teaching_web_tutorials">Game perspective</a>
+        <a href="#game_perspective">Game perspective</a>
         <a href="#fascinating_concepts_section">Fascinating concepts</a>
-        <a href="#courses_section">Courses</a>
+        <a href="#modules">Modules</a>
       </div>
     </div>
 
@@ -108,7 +123,7 @@
       <!-- PHOTO -->
       <div class="dpbox">
         <div class="dp">
-          <img style="border-radius: 50%; width: 200px; height: 200px" alt="Vivek's photo"
+          <img loading="lazy" style="border-radius: 50%; width: 200px; height: 200px" alt="Vivek's photo"
             src="https://avatars.githubusercontent.com/u/50669543?v=4" />
         </div>
       </div>
@@ -127,7 +142,7 @@
         <strong class="position">Master of Technology in Mechanical Design</strong>
         <div class="institute">Indian Institute of Technology Madras, India</div>
         <div class="year">(2013 - 2015)</div>
-        <strong class="position">Bachelor of Engineering in Mechanical </strong>
+        <strong class="position">Bachelor of Engineering in Mechanical Engineering</strong>
         <div class="institute">Sri Sairam Engineering College, India</div>
         <div class="year">(2009 - 2013)</div>
       </div>
@@ -137,8 +152,8 @@
     <br />
     <div class="newspaper">
       <div class="newspaper-column">
-        <h2>Research</h2>
-        <img src="img/CHg.gif" alt="Acoustic shape optimisation" id="CHg" />
+        <h2 onclick="unhideElement('research')" href="#research">Research</h2>
+        <img loading="lazy" src="img/CHg.gif" alt="Acoustic shape optimisation" id="CHg" />
         <p>
           I explore artificial intelligence methods (metaheuristics, machine
           learning) for the shape and topology optimisation
@@ -174,12 +189,12 @@
   </div>
 
   <!-- PROFILE  -->
-  <div class="section hide" id="profile">
+  <!-- <div class="section hide" id="profile">
     <h1>Profile</h1>
     <br>
     <h2 id="education">EDUCATION</h2>
     <h3>
-      Ph.D. in Computer Science - Heuristics and metaheuristics for topology optimisation of acoustic porous materials
+      Ph.D. in Computer Science - Heuristics and metaheuristics in the design of acoustic porous materials
     </h3>
     <p>
       The University of Nottingham, United Kingdom (2018) <br />
@@ -216,8 +231,56 @@
       Atomic Energy Regulatory Board 
     </p>
 
+  <h2 id="projects">PROJECTS</h2>
+    <h3>Ph. D at the University of Nottingham</h3>
+    <li>Heuristics and metaheuristics for topology optimisation in acoustic porous materials.</li>
+    <li>Multilayered sound package optimisation using genetic algorithms</li>
+    <li>Hybrid gradient and non-gradient algorithms for acoustic topology optimisation.</li>
+    <li><a href="#webprojects" onclick="unhideElement('webprojects')">Several web projects</a>
+    </li>
+    <h3>Atomic Energy Regulatory Board</h3>
+    <li>Seismic margin analysis</li>
+    <h3>Master of Technology</h3>
+    <p>Final Project:</p>
+    <li>
+      Prediction of noise in power transformers using statistical energy
+      analysis
+    </li>
+    <p>Course Projects:</p>
+    <ol>
+      <li>Design of a mechanism for a wheelchair exerciser (Theory of mechanisms)</li>
+      <li>Design of a semi-automatic rice transplanter (Product design)</li>
+    </ol>
+    <p>
+      Centre For Innovation (CΦ
+      <a href="https://cfi.iitm.ac.in">cfi.iitm.ac.in</a>) projects: Designed and fabricated assistive devices for children with Cerebral Palsy.
+    </p>
+    <ol>
+      <li>Block Printing Device</li>
+      <li>Paper Punching Device</li>
+    </ol>
+    <h3>Bachelor of Engineering</h3>
+    <li>Design of a hydrodynamic under-water remotely operated vehicle</li> -->
+  </div>
+<!-- Research  -->
+<div class="section hide" id="research">
+  <h1>Research</h1>
+  
+  <h2 id="keywords">Keywords</h2>
+  <p>Topology optimisation, metaheuristics, acoustics, and additive manufacturing.</p>
+  <h2 id="summary">Summary</h2>
+  <p>
+    Historically, the geometric shapes of mechanical parts and structures, such as an aircraft wingbox, have been designed through a trial-and-error process followed by iterative improvements to existing designs. A breakthrough in geometric design unfolded in the 1990s through the introduction of structural topology optimisation techniques, which allow generating optimal shapes and topologies for mechanical structures from scratch. Many parts and products have undergone significant innovations due to topology optimisation. A notable example is the reduction in weight of 1000 kilograms per aircraft in Airbus A380 (<a href="https://doi.org/10.2514/6.2004-4481">Krog et al. 2012</a>).  
+  </p>
+  <p>
+    Finding the most optimal shape and topology for a given problem in terms of loads and boundary conditions is a computationally hard and there are no practicable algorithms available in many problem cases. Whereas finding near-optimal solutions that are good enough in quick enough time can be achieved through adjoint methods. These gradient-based methods can get stuck at local optimal solutions if the mathematical structure of the objective function is multimodal. The problem of local optimal solutions can be addressed through heuristics and metaheuristics strategies which constitute a subset of artificial intelligence (AI). 
+    </p>
 
-    <h2 id="publications">PUBLICATIONS</h2>
+    <p>The overall research aim is to improve topology optimisation techniques through the use of AI and extend the practicability of these techniques.  </p>
+  </p>
+ 
+
+  <h2 id="publications">PUBLICATIONS</h2>
     <h3>Journal articles:</h3>
     <ol>
       <li>
@@ -240,7 +303,7 @@
         </div>
       </li>
       <li>
-        Vivek T. Ramamoorthy, Ender Özcan, Andrew J. Parkes, Luc Jaouen, François-Xavier Bécot, Multi-objective topology optimisation for acoustic porous materials using gradient-based, gradient-free and hybrid strategies, submitted to The Journal of Acoustical Society of America. 
+        Ramamoorthy, V.T., Özcan, E., Parkes, A.J., Jaouen, L. and Bécot, F.X., 2023. Multi-objective topology optimisation for acoustic porous materials using gradient-based, gradient-free, and hybrid strategies. The Journal of the Acoustical Society of America, 153(5), pp.2945-2945. 
         <div class="publication-links flex row center gap">
           <div class="bibtex">
             <a target="_blank" href="pdf/ramamoorthy2022multiobjective.pdf">Preprint</a>
@@ -315,63 +378,45 @@
       </li>
       <!-- Add more conferences here -->
     </ol>
-    <h2 id="researchinterests">RESEARCH INTERESTS</h2>
+    
+    <h2 id="current_projects">Current projects</h2>
+    <h3>1. AI-based algorithms for more efficient topology optimisation</h3>
     <p>
-      Metaheuristics, topology optimisation, acoustic porous materials, machine learning. <br />
+      Gradient-based approaches are quite efficient than metaheuristic strategies applied to the discrete topology optimisation problem. But metaheuristics used in conjunction with gradient-based methods have been able to overcome the problem of local optimality by outperforming gradient strategies for the same computational time (<a target="_blank" href="https://doi.org/10.1121/10.0019455">Ramamoorthy et al. 2022</a>).  
+    </p>
+    <h3>2. Manufacturability-oriented topology optimisation</h3>
+    <p>
+      Manufacturability forms a roadblock in extending the use of topology optimised shapes in certain applications. While advancements in additive manufacturing have ensured the feasibility of manufacturing topology-optimised structures, the fabrication time and tool costs involved vs. conventional manufacturing methods needs due consideration to assess which approach is indeed the truly optimal in engineering practise. Hence, it is of interest to develop approaches to deal with manufacturability within the algorithm.
     </p>
 
-    <h2 id="projects">PROJECTS</h2>
-    <h3>Ph. D at the University of Nottingham</h3>
-    <li>Heuristics and metaheuristics for topology optimisation in acoustic porous materials.</li>
-    <li>Multilayered sound package optimisation using genetic algorithms</li>
-    <li>Hybrid gradient and non-gradient algorithms for acoustic topology optimisation.</li>
-    <li><a href="#webprojects" onclick="unhideElement('webprojects')">Several web projects</a>
-    </li>
-    <h3>Atomic Energy Regulatory Board</h3>
-    <li>Seismic margin analysis</li>
-    <h3>Master of Technology</h3>
-    <p>Final Project:</p>
-    <li>
-      Prediction of noise in power transformers using statistical energy
-      analysis
-    </li>
-    <p>Course Projects:</p>
-    <ol>
-      <li>Design of a mechanism for a wheelchair exerciser (Theory of mechanisms)</li>
-      <li>Design of a semi-automatic rice transplanter (Product design)</li>
-    </ol>
-    <p>
-      Centre For Innovation (CΦ
-      <a href="https://cfi.iitm.ac.in">cfi.iitm.ac.in</a>) projects: Designed and fabricated assistive devices for children with Cerebral Palsy.
-    </p>
-    <ol>
-      <li>Block Printing Device</li>
-      <li>Paper Punching Device</li>
-    </ol>
-    <h3>Bachelor of Engineering</h3>
-    <li>Design of a hydrodynamic under-water remotely operated vehicle</li>
-  </div>
+    <p>If you find these topics interesting and are looking to discuss or collaborate, please hesitate not to <a href="#contact" onclick="unhideElement('contact')">contact me</a>. 😊 </p>
+</div>
+
 
   <!-- TEACHING  -->
   <div class="section hide" id="teaching">
     <h1>Teaching</h1>
-    <h2>Game perspective</h2>
-    <a href="https://www.youtube.com/watch?v=0kdV3YzN9XU">Game perspective</a>
-    is the paradigm of learning through games or interactive demos. While
-    this is not a replacement for conventional learning (books, lectures,
-    exercises), it is a valuable alternative teaching method. <br><br>
-    With the ever-growing forest of human knowledge, there are too many
-    exciting things to learn, and life is too short. <br><br>
-    With the help of games or interactive demos, knowledge could be assimilated faster
-    and in a more fun way allowing us to learn more in a given lifetime. Check
-    out some of my works available in the
-    <a onclick="unhideElement('webprojects')" href="#">web projects</a>
-    section. Thanks to Luc Jaouen for inspiring me to make these. Check out
-    his works at
-    <a href="https://apmr.matelys.com">Acoustic Porous Material Recipes</a>.
-    <br><br>
-    A shoutout to Dan Russell for
-    <a href="https://www.acs.psu.edu/drussell/demos.html">his amazing work</a>.
+    <h2 id="game_perspective">Game perspective</h2>
+    <p>
+      <a href="https://www.youtube.com/watch?v=0kdV3YzN9XU">Game perspective</a>
+      
+      is the paradigm of learning through games or interactive demos. While
+      this is not a replacement for conventional learning (books, lectures,
+      exercises), it is a valuable alternative teaching method. 
+    </p>
+    <p>
+      With the ever-growing forest of human knowledge, there are too many exciting things to learn, and life is too short. 
+    </p>
+    <p>
+      With the help of games or interactive demos, knowledge could be assimilated faster and in a more fun way allowing us to learn more in a given lifetime. Check out some of my works available in the 
+      <a onclick="unhideElement('webprojects')" href="#">web projects</a>
+      section. Thanks to Luc Jaouen for inspiring me to make these. Check out
+      his works at
+      <a href="https://apmr.matelys.com">Acoustic Porous Material Recipes</a>.
+      <p>
+        A shoutout to Dan Russell for
+        <a href="https://www.acs.psu.edu/drussell/demos.html">his amazing work</a>.
+    </p>
     <h2 id="fascinating_concepts_section">Concepts that fascinate me</h2>
     <p>
       These are some of the concepts that I found intriguing. It is always interesting to ask people what concepts fascinate them the most, as I always learn something new. Every person has their list, and here is mine. If you think I need to include something, let me know. :-)
@@ -418,12 +463,18 @@
       <li>The concept of topology optimisation</li>
       <li>Antichess: (weakly solved) 1.e3 wins for White</li>
     </ol>
-    <h2 id="courses_section">Courses I am interested to teach</h2>
+    <h2 id="modules">Modules I teach </h2>
     <ol>
-      <li>Engineering Mechanics</li>
+      <li>Applied Design (Level 4 Semester A )</li>
+      <li>Industrial Mechanics (level 4 Semester B)</li>
+      <li>Programming for aeronautical engineers (Level 5 Semester B)</li>
+      <li>Data Analytics and Artificial Intelligence (Level 7 Semester A)</li>
+      <li>Acoustics (Level 7 Semester B)</li>
+
+      <!-- <li>Engineering Mechanics</li>
       <li>Optimisation and Artificial Intelligence methods</li>
       <li>Shape and topology optimisation in mechanical structures</li>
-      <li>Theory of vibration and acoustics</li>
+      <li>Theory of vibration and acoustics</li> -->
     </ol>
   </div>
 
@@ -629,6 +680,10 @@
       let splitURL = currentURL.split('#')
       if (splitURL.length > 1) {
         let currentSection = splitURL[splitURL.length - 1];
+        let subsectionURL = currentSection.split('_');
+        if (subsectionURL.length>1){ // ex:index.html#teaching_fascinatingconcepts
+          currentSection = subsectionURL[0];
+        }
         unhideElement(currentSection)
       }
     })
